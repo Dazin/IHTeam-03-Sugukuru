@@ -16,5 +16,10 @@ namespace WindowsFormsApplication6
         {
             InitializeComponent();
         }
+
+        private void testForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
