@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication6
 {
-    public partial class Form1 : Form
+    public partial class Seikyu_kobetu : Form
     {
-        public Form1()
+        public Seikyu_kobetu()
         {
             InitializeComponent();
         }

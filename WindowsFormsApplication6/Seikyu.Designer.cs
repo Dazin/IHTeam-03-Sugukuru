@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication6
 {
-    partial class Form2
+    partial class Seikyu
     {
         /// <summary>
         /// Required designer variable.

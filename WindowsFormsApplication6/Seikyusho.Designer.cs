@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication6
 {
-    partial class Form3
+    partial class Seikyusho
     {
         /// <summary>
         /// Required designer variable.

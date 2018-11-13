@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApplication6
 {
-    partial class Form1
+    partial class Seikyu_kobetu
     {
         /// <summary>
         /// 必要なデザイナー変数です。

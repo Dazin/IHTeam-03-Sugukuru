@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApplication6
 {
-    public partial class Form3 : Form
+    public partial class Seikyusho : Form
     {
-        public Form3()
+        public Seikyusho()
         {
             InitializeComponent();
         }
