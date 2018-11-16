@@ -16,5 +16,10 @@ namespace IH
         {
             InitializeComponent();
         }
+
+        private void Kaishu_Load(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Add("10001", "太郎", "080-XXXX-XXXX", "100,000", "100,000", "20181127", "20,000", "80,000", "未回収");
+        }
     }
 }

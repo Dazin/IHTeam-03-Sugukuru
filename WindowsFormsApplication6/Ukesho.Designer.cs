@@ -34,17 +34,17 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.lbCarPrice = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label16 = new System.Windows.Forms.Label();
+            this.lbComission = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label17 = new System.Windows.Forms.Label();
+            this.lbTax = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
+            this.lbCarPrice2 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
@@ -52,26 +52,26 @@
             this.label48 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.label50 = new System.Windows.Forms.Label();
+            this.lbDateIssue = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
+            this.lbDateOrder = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
             this.label54 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
+            this.lbPrice = new System.Windows.Forms.Label();
+            this.lbLimit = new System.Windows.Forms.Label();
+            this.lbWay = new System.Windows.Forms.Label();
+            this.lbPlace = new System.Windows.Forms.Label();
+            this.lbCharges = new System.Windows.Forms.Label();
+            this.lbPrice2 = new System.Windows.Forms.Label();
+            this.lbCar = new System.Windows.Forms.Label();
+            this.lbGrade = new System.Windows.Forms.Label();
+            this.lbYear = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
+            this.lbSystem = new System.Windows.Forms.Label();
+            this.lbDistance = new System.Windows.Forms.Label();
+            this.lbColor = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -130,7 +130,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.lbCarPrice);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Font = new System.Drawing.Font("MS UI Gothic", 15F);
             this.groupBox1.Location = new System.Drawing.Point(19, 375);
@@ -140,19 +140,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "車輌代金";
             // 
-            // label14
+            // lbCarPrice
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label14.Location = new System.Drawing.Point(89, 29);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(63, 12);
-            this.label14.TabIndex = 18;
-            this.label14.Text = "2,000,000円";
+            this.lbCarPrice.AutoSize = true;
+            this.lbCarPrice.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbCarPrice.Location = new System.Drawing.Point(89, 29);
+            this.lbCarPrice.Name = "lbCarPrice";
+            this.lbCarPrice.Size = new System.Drawing.Size(63, 12);
+            this.lbCarPrice.TabIndex = 18;
+            this.lbCarPrice.Text = "2,000,000円";
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label16);
+            this.groupBox2.Controls.Add(this.lbComission);
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Font = new System.Drawing.Font("MS UI Gothic", 15F);
             this.groupBox2.Location = new System.Drawing.Point(19, 439);
@@ -162,15 +162,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "販売諸費用(課税)";
             // 
-            // label16
+            // lbComission
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label16.Location = new System.Drawing.Point(113, 29);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(55, 12);
-            this.label16.TabIndex = 18;
-            this.label16.Text = "200,000円";
+            this.lbComission.AutoSize = true;
+            this.lbComission.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbComission.Location = new System.Drawing.Point(113, 29);
+            this.lbComission.Name = "lbComission";
+            this.lbComission.Size = new System.Drawing.Size(55, 12);
+            this.lbComission.TabIndex = 18;
+            this.lbComission.Text = "200,000円";
             // 
             // label15
             // 
@@ -184,7 +184,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.label17);
+            this.groupBox3.Controls.Add(this.lbTax);
             this.groupBox3.Controls.Add(this.label23);
             this.groupBox3.Font = new System.Drawing.Font("MS UI Gothic", 15F);
             this.groupBox3.Location = new System.Drawing.Point(276, 439);
@@ -194,15 +194,15 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "販売諸費用(非課税)";
             // 
-            // label17
+            // lbTax
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label17.Location = new System.Drawing.Point(109, 29);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(49, 12);
-            this.label17.TabIndex = 18;
-            this.label17.Text = "40,000円";
+            this.lbTax.AutoSize = true;
+            this.lbTax.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbTax.Location = new System.Drawing.Point(109, 29);
+            this.lbTax.Name = "lbTax";
+            this.lbTax.Size = new System.Drawing.Size(49, 12);
+            this.lbTax.TabIndex = 18;
+            this.lbTax.Text = "40,000円";
             // 
             // label23
             // 
@@ -244,15 +244,15 @@
             this.label39.TabIndex = 40;
             this.label39.Text = "お支払い合計";
             // 
-            // label40
+            // lbCarPrice2
             // 
-            this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label40.Location = new System.Drawing.Point(120, 514);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(63, 12);
-            this.label40.TabIndex = 46;
-            this.label40.Text = "2,000,000円";
+            this.lbCarPrice2.AutoSize = true;
+            this.lbCarPrice2.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbCarPrice2.Location = new System.Drawing.Point(120, 514);
+            this.lbCarPrice2.Name = "lbCarPrice2";
+            this.lbCarPrice2.Size = new System.Drawing.Size(63, 12);
+            this.lbCarPrice2.TabIndex = 46;
+            this.lbCarPrice2.Text = "2,000,000円";
             // 
             // label44
             // 
@@ -324,15 +324,15 @@
             this.button1.Text = "注文請書を作成";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // label50
+            // lbDateIssue
             // 
-            this.label50.AutoSize = true;
-            this.label50.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label50.Location = new System.Drawing.Point(599, 19);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(89, 12);
-            this.label50.TabIndex = 55;
-            this.label50.Text = "2018年11月05日";
+            this.lbDateIssue.AutoSize = true;
+            this.lbDateIssue.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbDateIssue.Location = new System.Drawing.Point(599, 19);
+            this.lbDateIssue.Name = "lbDateIssue";
+            this.lbDateIssue.Size = new System.Drawing.Size(89, 12);
+            this.lbDateIssue.TabIndex = 55;
+            this.lbDateIssue.Text = "2018年11月05日";
             // 
             // label51
             // 
@@ -354,15 +354,15 @@
             this.label52.TabIndex = 58;
             this.label52.Text = "支払方法";
             // 
-            // label43
+            // lbDateOrder
             // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label43.Location = new System.Drawing.Point(599, 41);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(89, 12);
-            this.label43.TabIndex = 61;
-            this.label43.Text = "2018年11月01日";
+            this.lbDateOrder.AutoSize = true;
+            this.lbDateOrder.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbDateOrder.Location = new System.Drawing.Point(599, 41);
+            this.lbDateOrder.Name = "lbDateOrder";
+            this.lbDateOrder.Size = new System.Drawing.Size(89, 12);
+            this.lbDateOrder.TabIndex = 61;
+            this.lbDateOrder.Text = "2018年11月01日";
             // 
             // label53
             // 
@@ -394,104 +394,104 @@
             this.label7.TabIndex = 68;
             this.label7.Text = "株式会社HAL御中";
             // 
-            // label8
+            // lbPrice
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("MS UI Gothic", 12F);
-            this.label8.Location = new System.Drawing.Point(93, 131);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(86, 16);
-            this.label8.TabIndex = 69;
-            this.label8.Text = "2,240,000円";
+            this.lbPrice.AutoSize = true;
+            this.lbPrice.Font = new System.Drawing.Font("MS UI Gothic", 12F);
+            this.lbPrice.Location = new System.Drawing.Point(93, 131);
+            this.lbPrice.Name = "lbPrice";
+            this.lbPrice.Size = new System.Drawing.Size(86, 16);
+            this.lbPrice.TabIndex = 69;
+            this.lbPrice.Text = "2,240,000円";
             // 
-            // label9
+            // lbLimit
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label9.Location = new System.Drawing.Point(93, 158);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(120, 16);
-            this.label9.TabIndex = 70;
-            this.label9.Text = "2018年12月01日";
+            this.lbLimit.AutoSize = true;
+            this.lbLimit.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbLimit.Location = new System.Drawing.Point(93, 158);
+            this.lbLimit.Name = "lbLimit";
+            this.lbLimit.Size = new System.Drawing.Size(120, 16);
+            this.lbLimit.TabIndex = 70;
+            this.lbLimit.Text = "2018年12月25日";
             // 
-            // label10
+            // lbWay
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label10.Location = new System.Drawing.Point(93, 185);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(72, 16);
-            this.label10.TabIndex = 71;
-            this.label10.Text = "銀行振込";
+            this.lbWay.AutoSize = true;
+            this.lbWay.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbWay.Location = new System.Drawing.Point(93, 185);
+            this.lbWay.Name = "lbWay";
+            this.lbWay.Size = new System.Drawing.Size(72, 16);
+            this.lbWay.TabIndex = 71;
+            this.lbWay.Text = "銀行振込";
             // 
-            // label11
+            // lbPlace
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label11.Location = new System.Drawing.Point(93, 212);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(133, 16);
-            this.label11.TabIndex = 72;
-            this.label11.Text = "株式会社HAL車庫";
+            this.lbPlace.AutoSize = true;
+            this.lbPlace.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbPlace.Location = new System.Drawing.Point(93, 212);
+            this.lbPlace.Name = "lbPlace";
+            this.lbPlace.Size = new System.Drawing.Size(133, 16);
+            this.lbPlace.TabIndex = 72;
+            this.lbPlace.Text = "株式会社HAL車庫";
             // 
-            // label18
+            // lbCharges
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label18.Location = new System.Drawing.Point(120, 538);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(55, 12);
-            this.label18.TabIndex = 73;
-            this.label18.Text = "240,000円";
+            this.lbCharges.AutoSize = true;
+            this.lbCharges.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbCharges.Location = new System.Drawing.Point(120, 538);
+            this.lbCharges.Name = "lbCharges";
+            this.lbCharges.Size = new System.Drawing.Size(55, 12);
+            this.lbCharges.TabIndex = 73;
+            this.lbCharges.Text = "240,000円";
             // 
-            // label19
+            // lbPrice2
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label19.Location = new System.Drawing.Point(120, 562);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(63, 12);
-            this.label19.TabIndex = 74;
-            this.label19.Text = "2,240,000円";
+            this.lbPrice2.AutoSize = true;
+            this.lbPrice2.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbPrice2.Location = new System.Drawing.Point(120, 562);
+            this.lbPrice2.Name = "lbPrice2";
+            this.lbPrice2.Size = new System.Drawing.Size(63, 12);
+            this.lbPrice2.TabIndex = 74;
+            this.lbPrice2.Text = "2,240,000円";
             // 
-            // label22
+            // lbCar
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label22.Location = new System.Drawing.Point(9, 25);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(97, 16);
-            this.label22.TabIndex = 19;
-            this.label22.Text = "車名：シルビア";
+            this.lbCar.AutoSize = true;
+            this.lbCar.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbCar.Location = new System.Drawing.Point(9, 25);
+            this.lbCar.Name = "lbCar";
+            this.lbCar.Size = new System.Drawing.Size(97, 16);
+            this.lbCar.TabIndex = 19;
+            this.lbCar.Text = "車名：シルビア";
             // 
-            // label24
+            // lbGrade
             // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("MS UI Gothic", 12F);
-            this.label24.Location = new System.Drawing.Point(9, 51);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(76, 16);
-            this.label24.TabIndex = 76;
-            this.label24.Text = "グレード：G";
+            this.lbGrade.AutoSize = true;
+            this.lbGrade.Font = new System.Drawing.Font("MS UI Gothic", 12F);
+            this.lbGrade.Location = new System.Drawing.Point(9, 51);
+            this.lbGrade.Name = "lbGrade";
+            this.lbGrade.Size = new System.Drawing.Size(76, 16);
+            this.lbGrade.TabIndex = 76;
+            this.lbGrade.Text = "グレード：G";
             // 
-            // label25
+            // lbYear
             // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("MS UI Gothic", 12F);
-            this.label25.Location = new System.Drawing.Point(9, 77);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(80, 16);
-            this.label25.TabIndex = 77;
-            this.label25.Text = "年式：2002";
+            this.lbYear.AutoSize = true;
+            this.lbYear.Font = new System.Drawing.Font("MS UI Gothic", 12F);
+            this.lbYear.Location = new System.Drawing.Point(9, 77);
+            this.lbYear.Name = "lbYear";
+            this.lbYear.Size = new System.Drawing.Size(80, 16);
+            this.lbYear.TabIndex = 77;
+            this.lbYear.Text = "年式：2002";
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.label29);
-            this.groupBox4.Controls.Add(this.label27);
-            this.groupBox4.Controls.Add(this.label26);
-            this.groupBox4.Controls.Add(this.label22);
-            this.groupBox4.Controls.Add(this.label25);
-            this.groupBox4.Controls.Add(this.label24);
+            this.groupBox4.Controls.Add(this.lbSystem);
+            this.groupBox4.Controls.Add(this.lbDistance);
+            this.groupBox4.Controls.Add(this.lbColor);
+            this.groupBox4.Controls.Add(this.lbCar);
+            this.groupBox4.Controls.Add(this.lbYear);
+            this.groupBox4.Controls.Add(this.lbGrade);
             this.groupBox4.Font = new System.Drawing.Font("MS UI Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.groupBox4.Location = new System.Drawing.Point(19, 245);
             this.groupBox4.Name = "groupBox4";
@@ -500,35 +500,35 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "車輌情報";
             // 
-            // label29
+            // lbSystem
             // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("MS UI Gothic", 12F);
-            this.label29.Location = new System.Drawing.Point(113, 77);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(146, 16);
-            this.label29.TabIndex = 80;
-            this.label29.Text = "変速システム：オートマ";
+            this.lbSystem.AutoSize = true;
+            this.lbSystem.Font = new System.Drawing.Font("MS UI Gothic", 12F);
+            this.lbSystem.Location = new System.Drawing.Point(113, 77);
+            this.lbSystem.Name = "lbSystem";
+            this.lbSystem.Size = new System.Drawing.Size(146, 16);
+            this.lbSystem.TabIndex = 80;
+            this.lbSystem.Text = "変速システム：オートマ";
             // 
-            // label27
+            // lbDistance
             // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("MS UI Gothic", 12F);
-            this.label27.Location = new System.Drawing.Point(113, 51);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(123, 16);
-            this.label27.TabIndex = 79;
-            this.label27.Text = "走行距離：8万km";
+            this.lbDistance.AutoSize = true;
+            this.lbDistance.Font = new System.Drawing.Font("MS UI Gothic", 12F);
+            this.lbDistance.Location = new System.Drawing.Point(113, 51);
+            this.lbDistance.Name = "lbDistance";
+            this.lbDistance.Size = new System.Drawing.Size(123, 16);
+            this.lbDistance.TabIndex = 79;
+            this.lbDistance.Text = "走行距離：8万km";
             // 
-            // label26
+            // lbColor
             // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("MS UI Gothic", 12F);
-            this.label26.Location = new System.Drawing.Point(113, 25);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(99, 16);
-            this.label26.TabIndex = 78;
-            this.label26.Text = "カラー：ホワイト";
+            this.lbColor.AutoSize = true;
+            this.lbColor.Font = new System.Drawing.Font("MS UI Gothic", 12F);
+            this.lbColor.Location = new System.Drawing.Point(113, 25);
+            this.lbColor.Name = "lbColor";
+            this.lbColor.Size = new System.Drawing.Size(99, 16);
+            this.lbColor.TabIndex = 78;
+            this.lbColor.Text = "カラー：ホワイト";
             // 
             // Form3
             // 
@@ -537,19 +537,19 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(704, 682);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.label19);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lbPrice2);
+            this.Controls.Add(this.lbCharges);
+            this.Controls.Add(this.lbPlace);
+            this.Controls.Add(this.lbWay);
+            this.Controls.Add(this.lbLimit);
+            this.Controls.Add(this.lbPrice);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label54);
-            this.Controls.Add(this.label43);
+            this.Controls.Add(this.lbDateOrder);
             this.Controls.Add(this.label53);
             this.Controls.Add(this.label52);
             this.Controls.Add(this.label51);
-            this.Controls.Add(this.label50);
+            this.Controls.Add(this.lbDateIssue);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label49);
             this.Controls.Add(this.label48);
@@ -560,7 +560,7 @@
             this.Controls.Add(this.label37);
             this.Controls.Add(this.label38);
             this.Controls.Add(this.label39);
-            this.Controls.Add(this.label40);
+            this.Controls.Add(this.lbCarPrice2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -571,6 +571,7 @@
             this.MaximizeBox = false;
             this.Name = "Form3";
             this.Text = "注文請書作成画面";
+            this.Load += new System.EventHandler(this.Form3_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -599,7 +600,7 @@
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label lbCarPrice2;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label46;
@@ -607,28 +608,28 @@
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label lbDateIssue;
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label lbDateOrder;
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label lbPrice;
+        private System.Windows.Forms.Label lbLimit;
+        private System.Windows.Forms.Label lbWay;
+        private System.Windows.Forms.Label lbPlace;
+        private System.Windows.Forms.Label lbCarPrice;
+        private System.Windows.Forms.Label lbComission;
+        private System.Windows.Forms.Label lbTax;
+        private System.Windows.Forms.Label lbCharges;
+        private System.Windows.Forms.Label lbPrice2;
+        private System.Windows.Forms.Label lbCar;
+        private System.Windows.Forms.Label lbGrade;
+        private System.Windows.Forms.Label lbYear;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label lbSystem;
+        private System.Windows.Forms.Label lbDistance;
+        private System.Windows.Forms.Label lbColor;
     }
 }
