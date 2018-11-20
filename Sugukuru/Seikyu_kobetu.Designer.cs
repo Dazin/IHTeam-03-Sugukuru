@@ -32,12 +32,12 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -85,6 +85,16 @@
             this.panel1.Size = new System.Drawing.Size(225, 141);
             this.panel1.TabIndex = 5;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 13F);
+            this.label2.Location = new System.Drawing.Point(15, 100);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(171, 26);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "お支払い期限：";
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -98,7 +108,7 @@
             // panel2
             // 
             this.panel2.AutoSize = true;
-            this.panel2.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.panel2.BackColor = System.Drawing.SystemColors.Control;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.comboBox4);
@@ -108,6 +118,16 @@
             this.panel2.Size = new System.Drawing.Size(386, 141);
             this.panel2.TabIndex = 6;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 13F);
+            this.label3.Location = new System.Drawing.Point(27, 100);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(181, 26);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "2018年9月31日";
             // 
             // comboBox4
             // 
@@ -130,38 +150,18 @@
             this.button1.Text = "請求書作成";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("MS UI Gothic", 13F);
-            this.label2.Location = new System.Drawing.Point(15, 100);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 26);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "お支払い期限：";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 13F);
-            this.label3.Location = new System.Drawing.Point(27, 100);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(181, 26);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "2018年9月31日";
-            // 
-            // Form1
+            // Seikyu_kobetu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1058, 664);
+            this.ClientSize = new System.Drawing.Size(1034, 529);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "Seikyu_kobetu";
             this.Text = "請求書（個別）作成";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);

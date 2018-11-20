@@ -260,12 +260,12 @@
             this.button1.Font = new System.Drawing.Font("MS UI Gothic", 13F);
             this.button1.Location = new System.Drawing.Point(524, 491);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(215, 36);
+            this.button1.Size = new System.Drawing.Size(215, 41);
             this.button1.TabIndex = 121;
             this.button1.Text = "受注情報登録";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // zyutyu
+            // Juchu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -292,7 +292,7 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label1);
-            this.Name = "zyutyu";
+            this.Name = "Juchu";
             this.Text = "受注情報入力画面";
             this.ResumeLayout(false);
             this.PerformLayout();
