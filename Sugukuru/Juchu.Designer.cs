@@ -50,6 +50,8 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // radioButton2
@@ -258,18 +260,39 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("MS UI Gothic", 13F);
-            this.button1.Location = new System.Drawing.Point(524, 491);
+            this.button1.Location = new System.Drawing.Point(561, 674);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(215, 41);
             this.button1.TabIndex = 121;
             this.button1.Text = "受注情報登録";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(14, 471);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.textBox5.Multiline = true;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(772, 177);
+            this.textBox5.TabIndex = 122;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(34, 449);
+            this.label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(346, 18);
+            this.label10.TabIndex = 123;
+            this.label10.Text = "その他　特筆事項（キズ、事故歴、妥協案など）";
+            // 
             // Juchu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(804, 560);
+            this.ClientSize = new System.Drawing.Size(804, 736);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label6);
@@ -323,5 +346,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label10;
     }
 }
