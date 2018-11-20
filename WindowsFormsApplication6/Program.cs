@@ -16,7 +16,7 @@ namespace WindowsFormsApplication6
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new IH.Form3());
+            Application.Run(new Seikyu());
         }
     }
 }
