@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApplication6
+﻿namespace Sugukuru
 {
     partial class Seikyusho
     {
@@ -503,8 +503,8 @@
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label19);
             this.Name = "Seikyusho";
-            this.Text = "Form3";
-            this.Load += new System.EventHandler(this.Form3_Load);
+            this.Text = "Seikyusho";
+            this.Load += new System.EventHandler(this.Seikyusho_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);

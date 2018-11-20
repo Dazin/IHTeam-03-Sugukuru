@@ -17,7 +17,7 @@ namespace Sugukuru
             InitializeComponent();
         }
 
-        private void Ukesho_Load(object sender, EventArgs e)
+        private void Seikyusho_Load(object sender, EventArgs e)
         {
 
         }

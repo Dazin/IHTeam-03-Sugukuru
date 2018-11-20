@@ -1,6 +1,6 @@
-﻿namespace WindowsFormsApplication6
+﻿namespace Sugukuru
 {
-    partial class zyutyu
+    partial class Juchu
     {
         /// <summary>
         /// Required designer variable.

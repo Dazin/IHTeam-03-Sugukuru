@@ -97,11 +97,11 @@
     <Compile Include="Ukesho.Designer.cs">
       <DependentUpon>Ukesho.cs</DependentUpon>
     </Compile>
-    <Compile Include="zyutyu.cs">
+    <Compile Include="Juchu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="zyutyu.Designer.cs">
-      <DependentUpon>zyutyu.cs</DependentUpon>
+    <Compile Include="Juchu.Designer.cs">
+      <DependentUpon>Juchu.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Seikyu_kobetu.resx">
       <DependentUpon>Seikyu_kobetu.cs</DependentUpon>
@@ -134,8 +134,8 @@
     <EmbeddedResource Include="Ukesho.resx">
       <DependentUpon>Ukesho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="zyutyu.resx">
-      <DependentUpon>zyutyu.cs</DependentUpon>
+    <EmbeddedResource Include="Juchu.resx">
+      <DependentUpon>Juchu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication6
+namespace Sugukuru
 {
-    public partial class zyutyu : Form
+    public partial class Juchu : Form
     {
-        public zyutyu()
+        public Juchu()
         {
             InitializeComponent();
         }

@@ -34,11 +34,12 @@
             this.btSeikyuKobetsu = new System.Windows.Forms.Button();
             this.btSeikyusho = new System.Windows.Forms.Button();
             this.btSeikyu = new System.Windows.Forms.Button();
+            this.btJuchu = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btMitsumori
             // 
-            this.btMitsumori.Location = new System.Drawing.Point(99, 61);
+            this.btMitsumori.Location = new System.Drawing.Point(99, 103);
             this.btMitsumori.Name = "btMitsumori";
             this.btMitsumori.Size = new System.Drawing.Size(75, 23);
             this.btMitsumori.TabIndex = 0;
@@ -48,7 +49,7 @@
             // 
             // btUkesho
             // 
-            this.btUkesho.Location = new System.Drawing.Point(99, 235);
+            this.btUkesho.Location = new System.Drawing.Point(99, 231);
             this.btUkesho.Name = "btUkesho";
             this.btUkesho.Size = new System.Drawing.Size(75, 23);
             this.btUkesho.TabIndex = 1;
@@ -58,7 +59,7 @@
             // 
             // btKaishu
             // 
-            this.btKaishu.Location = new System.Drawing.Point(99, 32);
+            this.btKaishu.Location = new System.Drawing.Point(99, 71);
             this.btKaishu.Name = "btKaishu";
             this.btKaishu.Size = new System.Drawing.Size(75, 23);
             this.btKaishu.TabIndex = 2;
@@ -68,7 +69,7 @@
             // 
             // btSeikyuKobetsu
             // 
-            this.btSeikyuKobetsu.Location = new System.Drawing.Point(99, 138);
+            this.btSeikyuKobetsu.Location = new System.Drawing.Point(99, 167);
             this.btSeikyuKobetsu.Name = "btSeikyuKobetsu";
             this.btSeikyuKobetsu.Size = new System.Drawing.Size(75, 23);
             this.btSeikyuKobetsu.TabIndex = 3;
@@ -78,7 +79,7 @@
             // 
             // btSeikyusho
             // 
-            this.btSeikyusho.Location = new System.Drawing.Point(99, 167);
+            this.btSeikyusho.Location = new System.Drawing.Point(99, 199);
             this.btSeikyusho.Name = "btSeikyusho";
             this.btSeikyusho.Size = new System.Drawing.Size(75, 23);
             this.btSeikyusho.TabIndex = 4;
@@ -88,7 +89,7 @@
             // 
             // btSeikyu
             // 
-            this.btSeikyu.Location = new System.Drawing.Point(99, 109);
+            this.btSeikyu.Location = new System.Drawing.Point(99, 135);
             this.btSeikyu.Name = "btSeikyu";
             this.btSeikyu.Size = new System.Drawing.Size(75, 23);
             this.btSeikyu.TabIndex = 5;
@@ -96,11 +97,22 @@
             this.btSeikyu.UseVisualStyleBackColor = true;
             this.btSeikyu.Click += new System.EventHandler(this.btSeikyu_Click);
             // 
+            // btJuchu
+            // 
+            this.btJuchu.Location = new System.Drawing.Point(99, 39);
+            this.btJuchu.Name = "btJuchu";
+            this.btJuchu.Size = new System.Drawing.Size(75, 23);
+            this.btJuchu.TabIndex = 6;
+            this.btJuchu.Text = "受注";
+            this.btJuchu.UseVisualStyleBackColor = true;
+            this.btJuchu.Click += new System.EventHandler(this.btJuchu_Click);
+            // 
             // Top
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btJuchu);
             this.Controls.Add(this.btSeikyu);
             this.Controls.Add(this.btSeikyusho);
             this.Controls.Add(this.btSeikyuKobetsu);
@@ -121,5 +133,6 @@
         private System.Windows.Forms.Button btSeikyuKobetsu;
         private System.Windows.Forms.Button btSeikyusho;
         private System.Windows.Forms.Button btSeikyu;
+        private System.Windows.Forms.Button btJuchu;
     }
 }
