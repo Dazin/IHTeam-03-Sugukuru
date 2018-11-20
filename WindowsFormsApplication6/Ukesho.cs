@@ -19,6 +19,8 @@ namespace IH
 
         private void Form3_Load(object sender, EventArgs e)
         {
+            lbClient.Text = "株式会社HAL"+"御中";
+
             lbPrice.Text = "2,240,000円";
             lbLimit.Text = "2018年12月25日";
             lbWay.Text = "銀行振込";
@@ -42,6 +44,8 @@ namespace IH
             lbDateIssue.Text = "2018年11月05日";
             lbDateOrder.Text = "2018年11月01日";
 
+            lbStaff.Text = "担当:"+"鈴木";
+            lbMail.Text = "mail:sugukuru@hal.com";
 
         }
     }
