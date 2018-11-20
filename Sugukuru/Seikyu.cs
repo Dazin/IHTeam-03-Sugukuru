@@ -17,7 +17,7 @@ namespace Sugukuru
             InitializeComponent();
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        private void Shiire_Load(object sender, EventArgs e)
         {
             DataTable table = new DataTable("Table");
 

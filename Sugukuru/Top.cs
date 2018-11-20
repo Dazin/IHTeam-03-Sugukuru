@@ -79,5 +79,23 @@ namespace Sugukuru
             form.Dispose();//閉じられたらリソース開放
             this.Show();//自分自身を再表示する
         }
+
+        private void btCreateDocument_Click(object sender, EventArgs e)
+        {
+            this.Hide();//自分自身を非表示にする
+            Form form = new Sugukuru.CreateDocument();
+            form.ShowDialog();
+            form.Dispose();//閉じられたらリソース開放
+            this.Show();//自分自身を再表示する
+        }
+
+        private void btShiire_Click(object sender, EventArgs e)
+        {
+            this.Hide();//自分自身を非表示にする
+            Form form = new Sugukuru.Shiire();
+            form.ShowDialog();
+            form.Dispose();//閉じられたらリソース開放
+            this.Show();//自分自身を再表示する
+        }
     }
 }

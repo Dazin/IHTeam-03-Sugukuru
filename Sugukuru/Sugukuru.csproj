@@ -47,17 +47,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="CreateDocument.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="CreateDocument.designer.cs">
+      <DependentUpon>CreateDocument.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="Shiire.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="Shiire.designer.cs">
+      <DependentUpon>Shiire.cs</DependentUpon>
     </Compile>
     <Compile Include="Seikyu_kobetu.cs">
       <SubType>Form</SubType>
@@ -115,11 +115,11 @@
     <Compile Include="Juchu.Designer.cs">
       <DependentUpon>Juchu.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="CreateDocument.resx">
+      <DependentUpon>CreateDocument.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="Shiire.resx">
+      <DependentUpon>Shiire.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Seikyu_kobetu.resx">
       <DependentUpon>Seikyu_kobetu.cs</DependentUpon>

@@ -1,6 +1,6 @@
-﻿namespace IH13
+﻿namespace Sugukuru
 {
-    partial class Form2
+    partial class Shiire
     {
         /// <summary>
         /// Required designer variable.
@@ -171,7 +171,7 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "合計金額";
             // 
-            // Form2
+            // Shiire
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -183,9 +183,9 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
-            this.Name = "Form2";
-            this.Text = "\\//;.,omiu,mumjuj,ki";
-            this.Load += new System.EventHandler(this.Form2_Load);
+            this.Name = "Shiire";
+            this.Text = "仕入";
+            this.Load += new System.EventHandler(this.Shiire_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

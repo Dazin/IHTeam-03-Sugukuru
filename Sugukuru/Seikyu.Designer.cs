@@ -155,7 +155,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Seikyu";
             this.Text = "請求書作成画面";
-            this.Load += new System.EventHandler(this.Form2_Load);
+            this.Load += new System.EventHandler(this.Shiire_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

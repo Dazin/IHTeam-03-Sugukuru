@@ -163,7 +163,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Seikyu_kobetu";
             this.Text = "請求書（個別）作成";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.CreateDocument_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

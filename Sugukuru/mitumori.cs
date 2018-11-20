@@ -27,7 +27,7 @@ namespace Sugukuru
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void CreateDocument_Load(object sender, EventArgs e)
         {
 
         }

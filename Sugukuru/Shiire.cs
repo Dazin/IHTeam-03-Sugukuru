@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace IH13
+namespace Sugukuru
 {
-    public partial class Form2 : Form
+    public partial class Shiire : Form
     {
-        public Form2()
+        public Shiire()
         {
             InitializeComponent();
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        private void Shiire_Load(object sender, EventArgs e)
         {
 
         }

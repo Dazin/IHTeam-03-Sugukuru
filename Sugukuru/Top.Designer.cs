@@ -35,6 +35,8 @@
             this.btSeikyusho = new System.Windows.Forms.Button();
             this.btSeikyu = new System.Windows.Forms.Button();
             this.btJuchu = new System.Windows.Forms.Button();
+            this.btCreateDocument = new System.Windows.Forms.Button();
+            this.btShiire = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btMitsumori
@@ -107,11 +109,33 @@
             this.btJuchu.UseVisualStyleBackColor = true;
             this.btJuchu.Click += new System.EventHandler(this.btJuchu_Click);
             // 
+            // btCreateDocument
+            // 
+            this.btCreateDocument.Location = new System.Drawing.Point(224, 39);
+            this.btCreateDocument.Name = "btCreateDocument";
+            this.btCreateDocument.Size = new System.Drawing.Size(75, 23);
+            this.btCreateDocument.TabIndex = 7;
+            this.btCreateDocument.Text = "書類作成";
+            this.btCreateDocument.UseVisualStyleBackColor = true;
+            this.btCreateDocument.Click += new System.EventHandler(this.btCreateDocument_Click);
+            // 
+            // btShiire
+            // 
+            this.btShiire.Location = new System.Drawing.Point(224, 71);
+            this.btShiire.Name = "btShiire";
+            this.btShiire.Size = new System.Drawing.Size(75, 23);
+            this.btShiire.TabIndex = 8;
+            this.btShiire.Text = "仕入";
+            this.btShiire.UseVisualStyleBackColor = true;
+            this.btShiire.Click += new System.EventHandler(this.btShiire_Click);
+            // 
             // Top
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btShiire);
+            this.Controls.Add(this.btCreateDocument);
             this.Controls.Add(this.btJuchu);
             this.Controls.Add(this.btSeikyu);
             this.Controls.Add(this.btSeikyusho);
@@ -134,5 +158,7 @@
         private System.Windows.Forms.Button btSeikyusho;
         private System.Windows.Forms.Button btSeikyu;
         private System.Windows.Forms.Button btJuchu;
+        private System.Windows.Forms.Button btCreateDocument;
+        private System.Windows.Forms.Button btShiire;
     }
 }
