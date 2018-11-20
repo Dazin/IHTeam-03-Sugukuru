@@ -1,4 +1,4 @@
-﻿namespace Sugukuru
+﻿namespace WindowsFormsApplication6
 {
     partial class Seikyusho
     {
@@ -63,6 +63,11 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -84,7 +89,7 @@
             // panel3
             // 
             this.panel3.AutoSize = true;
-            this.panel3.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.panel3.BackColor = System.Drawing.SystemColors.Control;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label2);
@@ -226,7 +231,7 @@
             // panel1
             // 
             this.panel1.AutoSize = true;
-            this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
@@ -389,11 +394,11 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("MS UI Gothic", 10F);
-            this.label22.Location = new System.Drawing.Point(414, 97);
+            this.label22.Location = new System.Drawing.Point(422, 97);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(272, 20);
+            this.label22.Size = new System.Drawing.Size(69, 20);
             this.label22.TabIndex = 5;
-            this.label22.Text = "住所地　大阪市北区梅田0-0-0";
+            this.label22.Text = "住所地";
             this.label22.Click += new System.EventHandler(this.label22_Click);
             // 
             // label23
@@ -410,18 +415,73 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("MS UI Gothic", 10F);
-            this.label24.Location = new System.Drawing.Point(414, 162);
+            this.label24.Location = new System.Drawing.Point(564, 162);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(152, 20);
+            this.label24.Size = new System.Drawing.Size(119, 20);
             this.label24.TabIndex = 32;
-            this.label24.Text = "℡　06-000-0000";
+            this.label24.Text = "06-000-0000";
             // 
-            // Ukesho
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("MS UI Gothic", 10F);
+            this.label25.Location = new System.Drawing.Point(497, 97);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(199, 20);
+            this.label25.TabIndex = 33;
+            this.label25.Text = "大阪市北区梅田0-0-0";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("MS UI Gothic", 10F);
+            this.label26.Location = new System.Drawing.Point(538, 162);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(29, 20);
+            this.label26.TabIndex = 34;
+            this.label26.Text = "℡";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("MS UI Gothic", 10F);
+            this.label27.Location = new System.Drawing.Point(497, 789);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(169, 20);
+            this.label27.TabIndex = 35;
+            this.label27.Text = "価格挿入用テキスト";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("MS UI Gothic", 10F);
+            this.label28.Location = new System.Drawing.Point(497, 830);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(169, 20);
+            this.label28.TabIndex = 36;
+            this.label28.Text = "価格挿入用テキスト";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("MS UI Gothic", 10F);
+            this.label29.Location = new System.Drawing.Point(497, 920);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(169, 20);
+            this.label29.TabIndex = 37;
+            this.label29.Text = "価格挿入用テキスト";
+            // 
+            // Seikyusho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(698, 962);
+            this.Controls.Add(this.label29);
+            this.Controls.Add(this.label28);
+            this.Controls.Add(this.label27);
+            this.Controls.Add(this.label26);
+            this.Controls.Add(this.label25);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.label22);
@@ -442,9 +502,9 @@
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label19);
-            this.Name = "Ukesho";
-            this.Text = "Ukesho";
-            this.Load += new System.EventHandler(this.Ukesho_Load);
+            this.Name = "Seikyusho";
+            this.Text = "Form3";
+            this.Load += new System.EventHandler(this.Form3_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -493,6 +553,11 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
 
 
     }
