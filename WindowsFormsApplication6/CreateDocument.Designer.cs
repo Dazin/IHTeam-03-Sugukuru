@@ -64,6 +64,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -375,11 +376,22 @@
             this.label1.TabIndex = 44;
             this.label1.Text = "出荷No.";
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label13.Location = new System.Drawing.Point(515, 20);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(111, 33);
+            this.label13.TabIndex = 65;
+            this.label13.Text = "納品書";
+            // 
             // CreateDocument
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 681);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox14);
             this.Controls.Add(this.textBox13);
@@ -458,5 +470,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label13;
     }
 }
