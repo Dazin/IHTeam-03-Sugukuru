@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace IH
+namespace Sugukuru
 {
-    public partial class Form3 : Form
+    public partial class Ukesho : Form
     {
-        public Form3()
+        public Ukesho()
         {
             InitializeComponent();
         }
 
-        private void Form3_Load(object sender, EventArgs e)
+        private void Ukesho_Load(object sender, EventArgs e)
         {
             lbClient.Text = "株式会社HAL"+"御中";
 
@@ -45,7 +45,7 @@ namespace IH
             lbDateOrder.Text = "2018年11月01日";
 
             lbStaff.Text = "担当:"+"鈴木";
-            lbMail.Text = "mail:sugukuru@hal.com";
+            lbMail.Text = "mail:Sugukuru@hal.com";
 
         }
     }

@@ -1,6 +1,6 @@
-﻿namespace IH31gamen2
+﻿namespace Sugukuru
 {
-    partial class Form4
+    partial class Mitsumori
     {
         /// <summary>
         /// 必要なデザイナー変数です。

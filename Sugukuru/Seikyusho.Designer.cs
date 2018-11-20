@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApplication6
+﻿namespace Sugukuru
 {
     partial class Seikyusho
     {
@@ -416,7 +416,7 @@
             this.label24.TabIndex = 32;
             this.label24.Text = "℡　06-000-0000";
             // 
-            // Form3
+            // Ukesho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -442,9 +442,9 @@
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label19);
-            this.Name = "Form3";
-            this.Text = "Form3";
-            this.Load += new System.EventHandler(this.Form3_Load);
+            this.Name = "Ukesho";
+            this.Text = "Ukesho";
+            this.Load += new System.EventHandler(this.Ukesho_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication6
+namespace Sugukuru
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace WindowsFormsApplication6
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new IH.Form3());
+            Application.Run(new Top());
         }
     }
 }

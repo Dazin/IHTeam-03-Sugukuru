@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace IH31gamen2
+namespace Sugukuru
 {
-    public partial class Form4 : Form
+    public partial class Mitsumori : Form
     {
-        public Form4()
+        public Mitsumori()
         {
             InitializeComponent();
         }

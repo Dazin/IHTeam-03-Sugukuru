@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication6
+namespace Sugukuru
 {
     public partial class Seikyusho : Form
     {
@@ -17,7 +17,7 @@ namespace WindowsFormsApplication6
             InitializeComponent();
         }
 
-        private void Form3_Load(object sender, EventArgs e)
+        private void Ukesho_Load(object sender, EventArgs e)
         {
 
         }

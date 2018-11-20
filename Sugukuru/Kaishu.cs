@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace IH
+namespace Sugukuru
 {
     public partial class Kaishu : Form
     {

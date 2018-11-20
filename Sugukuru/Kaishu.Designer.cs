@@ -1,4 +1,4 @@
-﻿namespace IH
+﻿namespace Sugukuru
 {
     partial class Kaishu
     {

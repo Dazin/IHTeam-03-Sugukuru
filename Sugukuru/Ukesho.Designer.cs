@@ -1,6 +1,6 @@
-﻿namespace IH
+﻿namespace Sugukuru
 {
-    partial class Form3
+    partial class Ukesho
     {
         /// <summary>
         /// Required designer variable.
@@ -302,7 +302,7 @@
             this.lbMail.Name = "lbMail";
             this.lbMail.Size = new System.Drawing.Size(120, 12);
             this.lbMail.TabIndex = 52;
-            this.lbMail.Text = "mail:sugukuru@hal.com";
+            this.lbMail.Text = "mail:Sugukuru@hal.com";
             // 
             // lbStaff
             // 
@@ -530,7 +530,7 @@
             this.lbColor.TabIndex = 78;
             this.lbColor.Text = "カラー：ホワイト";
             // 
-            // Form3
+            // Ukesho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -569,9 +569,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.MaximizeBox = false;
-            this.Name = "Form3";
+            this.Name = "Ukesho";
             this.Text = "注文請書作成画面";
-            this.Load += new System.EventHandler(this.Form3_Load);
+            this.Load += new System.EventHandler(this.Ukesho_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

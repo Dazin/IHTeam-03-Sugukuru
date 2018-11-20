@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApplication6
+﻿namespace Sugukuru
 {
     partial class Form5
     {

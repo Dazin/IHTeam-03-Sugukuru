@@ -7,10 +7,11 @@
     <ProjectGuid>{BACF8F51-2C12-46E2-8C54-0A46CDA37DFC}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WindowsFormsApplication6</RootNamespace>
-    <AssemblyName>WindowsFormsApplication6</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <RootNamespace>Sugukuru</RootNamespace>
+    <AssemblyName>Sugukuru</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -64,11 +65,11 @@
     <Compile Include="Seikyusho.Designer.cs">
       <DependentUpon>Seikyusho.cs</DependentUpon>
     </Compile>
-    <Compile Include="mitumori.cs">
+    <Compile Include="Mitumori.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="mitumori.Designer.cs">
-      <DependentUpon>mitumori.cs</DependentUpon>
+    <Compile Include="Mitumori.Designer.cs">
+      <DependentUpon>Mitumori.cs</DependentUpon>
     </Compile>
     <Compile Include="Form5.cs">
       <SubType>Form</SubType>
@@ -84,6 +85,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Top.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Top.Designer.cs">
+      <DependentUpon>Top.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ukesho.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,8 +106,8 @@
     <EmbeddedResource Include="Seikyusho.resx">
       <DependentUpon>Seikyusho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="mitumori.resx">
-      <DependentUpon>mitumori.cs</DependentUpon>
+    <EmbeddedResource Include="Mitumori.resx">
+      <DependentUpon>Mitumori.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Kaishu.resx">
       <DependentUpon>Kaishu.cs</DependentUpon>
@@ -113,7 +120,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Top.resx">
+      <DependentUpon>Top.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ukesho.resx">
       <DependentUpon>Ukesho.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,7 +139,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
