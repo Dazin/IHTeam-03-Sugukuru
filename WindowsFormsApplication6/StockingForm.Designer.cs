@@ -178,7 +178,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(113, 42);
             this.button1.TabIndex = 16;
-            this.button1.Text = "button1";
+            this.button1.Text = "印刷";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // StockingForm

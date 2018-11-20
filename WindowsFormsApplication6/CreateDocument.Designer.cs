@@ -60,7 +60,7 @@
             this.Receipt = new System.Windows.Forms.CheckBox();
             this.DeliveryDocument = new System.Windows.Forms.CheckBox();
             this.Shipping = new System.Windows.Forms.CheckBox();
-            this.ShippingCopy = new System.Windows.Forms.CheckBox();
+            this.SalesSlip = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -336,15 +336,15 @@
             this.Shipping.Text = "出荷指示書";
             this.Shipping.UseVisualStyleBackColor = true;
             // 
-            // ShippingCopy
+            // SalesSlip
             // 
-            this.ShippingCopy.AutoSize = true;
-            this.ShippingCopy.Location = new System.Drawing.Point(28, 17);
-            this.ShippingCopy.Name = "ShippingCopy";
-            this.ShippingCopy.Size = new System.Drawing.Size(104, 16);
-            this.ShippingCopy.TabIndex = 40;
-            this.ShippingCopy.Text = "出荷指示書(控)";
-            this.ShippingCopy.UseVisualStyleBackColor = true;
+            this.SalesSlip.AutoSize = true;
+            this.SalesSlip.Location = new System.Drawing.Point(28, 17);
+            this.SalesSlip.Name = "SalesSlip";
+            this.SalesSlip.Size = new System.Drawing.Size(72, 16);
+            this.SalesSlip.TabIndex = 40;
+            this.SalesSlip.Text = "売上伝票";
+            this.SalesSlip.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -420,7 +420,7 @@
             this.Controls.Add(this.Receipt);
             this.Controls.Add(this.DeliveryDocument);
             this.Controls.Add(this.Shipping);
-            this.Controls.Add(this.ShippingCopy);
+            this.Controls.Add(this.SalesSlip);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
@@ -466,7 +466,7 @@
         private System.Windows.Forms.CheckBox Receipt;
         private System.Windows.Forms.CheckBox DeliveryDocument;
         private System.Windows.Forms.CheckBox Shipping;
-        private System.Windows.Forms.CheckBox ShippingCopy;
+        private System.Windows.Forms.CheckBox SalesSlip;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
