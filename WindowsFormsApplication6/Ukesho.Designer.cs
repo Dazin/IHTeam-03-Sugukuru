@@ -45,12 +45,12 @@
             this.label38 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.lbCarPrice2 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
+            this.lbHost = new System.Windows.Forms.Label();
+            this.lbAddress = new System.Windows.Forms.Label();
+            this.lbTel = new System.Windows.Forms.Label();
+            this.lbFax = new System.Windows.Forms.Label();
+            this.lbMail = new System.Windows.Forms.Label();
+            this.lbStaff = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.lbDateIssue = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
@@ -58,7 +58,7 @@
             this.lbDateOrder = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
             this.label54 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lbClient = new System.Windows.Forms.Label();
             this.lbPrice = new System.Windows.Forms.Label();
             this.lbLimit = new System.Windows.Forms.Label();
             this.lbWay = new System.Windows.Forms.Label();
@@ -254,65 +254,65 @@
             this.lbCarPrice2.TabIndex = 46;
             this.lbCarPrice2.Text = "2,000,000円";
             // 
-            // label44
+            // lbHost
             // 
-            this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label44.Location = new System.Drawing.Point(459, 80);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(101, 12);
-            this.label44.TabIndex = 38;
-            this.label44.Text = "株式会社スグクル社";
+            this.lbHost.AutoSize = true;
+            this.lbHost.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbHost.Location = new System.Drawing.Point(459, 80);
+            this.lbHost.Name = "lbHost";
+            this.lbHost.Size = new System.Drawing.Size(101, 12);
+            this.lbHost.TabIndex = 38;
+            this.lbHost.Text = "株式会社スグクル社";
             // 
-            // label45
+            // lbAddress
             // 
-            this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label45.Location = new System.Drawing.Point(459, 101);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(181, 12);
-            this.label45.TabIndex = 49;
-            this.label45.Text = "大阪府大阪市北区梅田９丁目９−９";
+            this.lbAddress.AutoSize = true;
+            this.lbAddress.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbAddress.Location = new System.Drawing.Point(459, 101);
+            this.lbAddress.Name = "lbAddress";
+            this.lbAddress.Size = new System.Drawing.Size(181, 12);
+            this.lbAddress.TabIndex = 49;
+            this.lbAddress.Text = "大阪府大阪市北区梅田９丁目９−９";
             // 
-            // label46
+            // lbTel
             // 
-            this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label46.Location = new System.Drawing.Point(459, 122);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(99, 12);
-            this.label46.TabIndex = 50;
-            this.label46.Text = "TEL:06-5678-1234";
+            this.lbTel.AutoSize = true;
+            this.lbTel.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbTel.Location = new System.Drawing.Point(459, 122);
+            this.lbTel.Name = "lbTel";
+            this.lbTel.Size = new System.Drawing.Size(99, 12);
+            this.lbTel.TabIndex = 50;
+            this.lbTel.Text = "TEL:06-5678-1234";
             // 
-            // label47
+            // lbFax
             // 
-            this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label47.Location = new System.Drawing.Point(459, 143);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(101, 12);
-            this.label47.TabIndex = 51;
-            this.label47.Text = "FAX:06-5678-1235";
+            this.lbFax.AutoSize = true;
+            this.lbFax.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbFax.Location = new System.Drawing.Point(459, 143);
+            this.lbFax.Name = "lbFax";
+            this.lbFax.Size = new System.Drawing.Size(101, 12);
+            this.lbFax.TabIndex = 51;
+            this.lbFax.Text = "FAX:06-5678-1235";
             // 
-            // label48
+            // lbMail
             // 
-            this.label48.AutoSize = true;
-            this.label48.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label48.Location = new System.Drawing.Point(459, 164);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(120, 12);
-            this.label48.TabIndex = 52;
-            this.label48.Text = "mail:sugukuru@hal.com";
+            this.lbMail.AutoSize = true;
+            this.lbMail.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbMail.Location = new System.Drawing.Point(459, 164);
+            this.lbMail.Name = "lbMail";
+            this.lbMail.Size = new System.Drawing.Size(120, 12);
+            this.lbMail.TabIndex = 52;
+            this.lbMail.Text = "mail:sugukuru@hal.com";
             // 
-            // label49
+            // lbStaff
             // 
-            this.label49.AutoSize = true;
-            this.label49.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label49.Location = new System.Drawing.Point(459, 185);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(55, 12);
-            this.label49.TabIndex = 53;
-            this.label49.Text = "担当:鈴木";
+            this.lbStaff.AutoSize = true;
+            this.lbStaff.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbStaff.Location = new System.Drawing.Point(459, 185);
+            this.lbStaff.Name = "lbStaff";
+            this.lbStaff.Size = new System.Drawing.Size(55, 12);
+            this.lbStaff.TabIndex = 53;
+            this.lbStaff.Text = "担当:鈴木";
             // 
             // button1
             // 
@@ -384,15 +384,15 @@
             this.label54.TabIndex = 62;
             this.label54.Text = "納品先";
             // 
-            // label7
+            // lbClient
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("MS UI Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label7.Location = new System.Drawing.Point(14, 60);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(166, 20);
-            this.label7.TabIndex = 68;
-            this.label7.Text = "株式会社HAL御中";
+            this.lbClient.AutoSize = true;
+            this.lbClient.Font = new System.Drawing.Font("MS UI Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbClient.Location = new System.Drawing.Point(14, 60);
+            this.lbClient.Name = "lbClient";
+            this.lbClient.Size = new System.Drawing.Size(166, 20);
+            this.lbClient.TabIndex = 68;
+            this.lbClient.Text = "株式会社HAL御中";
             // 
             // lbPrice
             // 
@@ -524,7 +524,7 @@
             // 
             this.lbColor.AutoSize = true;
             this.lbColor.Font = new System.Drawing.Font("MS UI Gothic", 12F);
-            this.lbColor.Location = new System.Drawing.Point(113, 25);
+            this.lbColor.Location = new System.Drawing.Point(262, 51);
             this.lbColor.Name = "lbColor";
             this.lbColor.Size = new System.Drawing.Size(99, 16);
             this.lbColor.TabIndex = 78;
@@ -543,7 +543,7 @@
             this.Controls.Add(this.lbWay);
             this.Controls.Add(this.lbLimit);
             this.Controls.Add(this.lbPrice);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lbClient);
             this.Controls.Add(this.label54);
             this.Controls.Add(this.lbDateOrder);
             this.Controls.Add(this.label53);
@@ -551,12 +551,12 @@
             this.Controls.Add(this.label51);
             this.Controls.Add(this.lbDateIssue);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label49);
-            this.Controls.Add(this.label48);
-            this.Controls.Add(this.label47);
-            this.Controls.Add(this.label46);
-            this.Controls.Add(this.label45);
-            this.Controls.Add(this.label44);
+            this.Controls.Add(this.lbStaff);
+            this.Controls.Add(this.lbMail);
+            this.Controls.Add(this.lbFax);
+            this.Controls.Add(this.lbTel);
+            this.Controls.Add(this.lbAddress);
+            this.Controls.Add(this.lbHost);
             this.Controls.Add(this.label37);
             this.Controls.Add(this.label38);
             this.Controls.Add(this.label39);
@@ -601,12 +601,12 @@
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label lbCarPrice2;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label lbHost;
+        private System.Windows.Forms.Label lbAddress;
+        private System.Windows.Forms.Label lbTel;
+        private System.Windows.Forms.Label lbFax;
+        private System.Windows.Forms.Label lbMail;
+        private System.Windows.Forms.Label lbStaff;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lbDateIssue;
         private System.Windows.Forms.Label label51;
@@ -614,7 +614,7 @@
         private System.Windows.Forms.Label lbDateOrder;
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.Label label54;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbClient;
         private System.Windows.Forms.Label lbPrice;
         private System.Windows.Forms.Label lbLimit;
         private System.Windows.Forms.Label lbWay;
