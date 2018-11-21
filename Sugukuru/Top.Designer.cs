@@ -51,7 +51,7 @@
             // 
             // btUkesho
             // 
-            this.btUkesho.Location = new System.Drawing.Point(99, 231);
+            this.btUkesho.Location = new System.Drawing.Point(99, 68);
             this.btUkesho.Name = "btUkesho";
             this.btUkesho.Size = new System.Drawing.Size(75, 23);
             this.btUkesho.TabIndex = 1;
@@ -61,7 +61,7 @@
             // 
             // btKaishu
             // 
-            this.btKaishu.Location = new System.Drawing.Point(99, 71);
+            this.btKaishu.Location = new System.Drawing.Point(99, 235);
             this.btKaishu.Name = "btKaishu";
             this.btKaishu.Size = new System.Drawing.Size(75, 23);
             this.btKaishu.TabIndex = 2;
@@ -71,7 +71,7 @@
             // 
             // btSeikyuKobetsu
             // 
-            this.btSeikyuKobetsu.Location = new System.Drawing.Point(99, 167);
+            this.btSeikyuKobetsu.Location = new System.Drawing.Point(99, 164);
             this.btSeikyuKobetsu.Name = "btSeikyuKobetsu";
             this.btSeikyuKobetsu.Size = new System.Drawing.Size(75, 23);
             this.btSeikyuKobetsu.TabIndex = 3;
@@ -81,7 +81,7 @@
             // 
             // btSeikyusho
             // 
-            this.btSeikyusho.Location = new System.Drawing.Point(99, 199);
+            this.btSeikyusho.Location = new System.Drawing.Point(99, 196);
             this.btSeikyusho.Name = "btSeikyusho";
             this.btSeikyusho.Size = new System.Drawing.Size(75, 23);
             this.btSeikyusho.TabIndex = 4;
@@ -91,7 +91,7 @@
             // 
             // btSeikyu
             // 
-            this.btSeikyu.Location = new System.Drawing.Point(99, 135);
+            this.btSeikyu.Location = new System.Drawing.Point(99, 132);
             this.btSeikyu.Name = "btSeikyu";
             this.btSeikyu.Size = new System.Drawing.Size(75, 23);
             this.btSeikyu.TabIndex = 5;
@@ -121,7 +121,7 @@
             // 
             // btShiire
             // 
-            this.btShiire.Location = new System.Drawing.Point(224, 71);
+            this.btShiire.Location = new System.Drawing.Point(224, 68);
             this.btShiire.Name = "btShiire";
             this.btShiire.Size = new System.Drawing.Size(75, 23);
             this.btShiire.TabIndex = 8;
