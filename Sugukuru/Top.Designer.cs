@@ -65,7 +65,7 @@
             this.btKaishu.Name = "btKaishu";
             this.btKaishu.Size = new System.Drawing.Size(75, 23);
             this.btKaishu.TabIndex = 2;
-            this.btKaishu.Text = "回収作成";
+            this.btKaishu.Text = "回収";
             this.btKaishu.UseVisualStyleBackColor = true;
             this.btKaishu.Click += new System.EventHandler(this.btKaishu_Click);
             // 
