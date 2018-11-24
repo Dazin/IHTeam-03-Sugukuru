@@ -1,5 +1,4 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Configuration;
 
 namespace Sugukuru
 {
@@ -109,32 +107,6 @@ namespace Sugukuru
 
             }
 
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            //抽出データ格納データセット作成
-            DataSet dSet = new DataSet("gakuseki");
-            // DB接続オブジェクト作成
-            MySqlConnection con = new MySqlConnection(this.conStr);
-            //DB接続
-            con.Open();
-            //SQL作成
-            String sql = "select * from gakuseki where gno = " + "" + TxGno.Text + "";
-            //SQL文と接続情報を指定し、データアダプタ作成
-            MySqlDataAdapter mAdp = new MySqlDataAdapter(sql, con);
-            //抽出データをデータセットへ取得
-            mAdp.Fill(dSet, "gakuseki");
-            //DB切断
-            con.Close();
-            //抽出件数チェック
-            int ResCnt = dSet.Tables["gakuseki"].Rows.Count;
-            if (ResCnt != 0)
-            {
-                TxGname.Text = dSet.Tables["gakuseki"].Rows[0]["gname"].ToString();
-                TxZip.Text = dSet.Tables["gakuseki"].Rows[0]["zip"].ToString();
-                TxAddr.Text = dSet.Tables["gakuseki"].Rows[0]["addr"].ToString();
-            }
         }
     }
 }

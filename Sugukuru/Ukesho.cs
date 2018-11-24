@@ -7,19 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Configuration;
-using MySql.Data.MySqlClient;
 
 namespace Sugukuru
 {
     public partial class Ukesho : Form
     {
-        String conStr = "";
-        String sql = "";
         public Ukesho()
         {
             InitializeComponent();
-            this.conStr = ConfigurationManager.AppSettings["DbConkey"];
         }
 
         private void Ukesho_Load(object sender, EventArgs e)
