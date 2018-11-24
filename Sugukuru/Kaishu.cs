@@ -23,8 +23,18 @@ namespace Sugukuru
 
         private void Kaishu_Load(object sender, EventArgs e)
         {
-
-            dataGridView1.Rows.Add("10001", "太郎", "080-XXXX-XXXX", "100,000", "100,000", "30年11月27日", "20,000", "80,000", "未回収");
+            dataGridView1.Columns.Add("kCode", "顧客コード");
+            dataGridView1.Columns.Add("kName", "顧客名");
+            dataGridView1.Columns.Add("kTel", "電話番号");
+            dataGridView1.Columns.Add("seikyu", "請求金額");
+            dataGridView1.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridView1.Columns.Add("nyukin", "入金日");
+            dataGridView1.Columns.Add("nyukinGaku", "入金額");
+            dataGridView1.Columns[5].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridView1.Columns.Add("mikaishu", "未回収金額");
+            dataGridView1.Columns[6].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridView1.Columns.Add("status", "状態");
+            dataGridView1.Rows.Add("10001", "太郎", "080-XXXX-XXXX",  "100,000", "30年11月27日", "20,000", "80,000", "未回収");
         }
 
 
@@ -115,6 +125,9 @@ namespace Sugukuru
 
         private void button2_Click(object sender, EventArgs e)
         {
+            // DGVの行を空にする。
+            dataGridView1.Rows.Clear();
+
             //抽出データ格納データセット作成
             DataSet dSet = new DataSet("data");
             // DB接続オブジェクト作成
@@ -122,7 +135,9 @@ namespace Sugukuru
             //DB接続
             con.Open();
             //SQL作成
-            String sql = "SELECT * FROM 顧客情報";
+            String sql = "SELECT k.顧客コード, k.顧客名, k.電話番号, s.請求金額 FROM 請求明細 s, 受注 j, 顧客情報 k "
+                +"WHERE s.受注コード = j.受注コード AND j.顧客コード = k.顧客コード"
+                ;
             //SQL文と接続情報を指定し、データアダプタ作成
             MySqlDataAdapter mAdp = new MySqlDataAdapter(sql, con);
             //抽出データをデータセットへ取得
@@ -130,14 +145,30 @@ namespace Sugukuru
             //DB切断
             con.Close();
             //抽出件数チェック
-            int ResCnt = dSet.Tables["data"].Rows.Count;
+            DataTable data = dSet.Tables["data"];
+            int ResCnt = data.Rows.Count;
             if (ResCnt != 0)
             {
-                DataTable data = dSet.Tables["data"];
-               String kCode = data.Rows[0]["顧客コード"].ToString();
-    //            TxZip.Text = data.Rows[0]["zip"].ToString();
-  //              TxAddr.Text = data.Rows[0]["addr"].ToString();
-                dataGridView1.Rows.Add(kCode, "太郎", "080-XXXX-XXXX", "100,000", "100,000", "30年11月27日", "20,000", "80,000", "未回収");
+                String kCode = data.Rows[0]["顧客コード"].ToString();
+                String kName = data.Rows[0]["顧客名"].ToString();
+                String kTel = data.Rows[0]["電話番号"].ToString();
+                String sPrice = String.Format("{0:#,0}", data.Rows[0]["請求金額"]);
+                String nyukinDate = "30年11月27日";//入金があったらここに格納する。
+                String nyukinGaku = "3,100,000"; //入金学をここに入れる。
+                String mikaishu = "不明";
+                String status = "未回収";
+                Decimal num1 = 0;
+                Decimal num2 = 0;
+                Decimal num3 = 0;
+                if (Decimal.TryParse(sPrice, out num1) == true && Decimal.TryParse(nyukinGaku, out num2) == true)
+                { 
+                     num3 = num1 - num2;
+                    mikaishu = String.Format("{0:#,0}", num3);
+                    if(num3 <0) {
+                        status = "過入金";
+                    }
+                }
+                dataGridView1.Rows.Add(kCode, kName, kTel, sPrice, nyukinDate , nyukinGaku, mikaishu, status);
             }
         }
     }

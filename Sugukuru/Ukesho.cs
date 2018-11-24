@@ -15,7 +15,6 @@ namespace Sugukuru
     public partial class Ukesho : Form
     {
         String conStr = "";
-        String sql = "";
         public Ukesho()
         {
             InitializeComponent();

@@ -30,18 +30,9 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.btOpen = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btLoadSeikyu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,67 +50,12 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column7,
-            this.Column1,
-            this.Column8,
-            this.Column4,
-            this.Column2,
-            this.Column5,
-            this.Column6,
-            this.Column3,
-            this.Column9});
             this.dataGridView1.Location = new System.Drawing.Point(25, 63);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 21;
             this.dataGridView1.Size = new System.Drawing.Size(956, 444);
             this.dataGridView1.TabIndex = 2;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "顧客コード";
-            this.Column7.Name = "Column7";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "顧客名";
-            this.Column1.Name = "Column1";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "電話番号";
-            this.Column8.Name = "Column8";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "販売価格";
-            this.Column4.Name = "Column4";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "請求額";
-            this.Column2.Name = "Column2";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "入金日";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "入金額";
-            this.Column6.Name = "Column6";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "未回収金額";
-            this.Column3.Name = "Column3";
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "状態";
-            this.Column9.Name = "Column9";
             // 
             // button1
             // 
@@ -132,7 +68,7 @@
             // 
             // btOpen
             // 
-            this.btOpen.Location = new System.Drawing.Point(172, 25);
+            this.btOpen.Location = new System.Drawing.Point(255, 25);
             this.btOpen.Name = "btOpen";
             this.btOpen.Size = new System.Drawing.Size(103, 23);
             this.btOpen.TabIndex = 4;
@@ -140,22 +76,22 @@
             this.btOpen.UseVisualStyleBackColor = true;
             this.btOpen.Click += new System.EventHandler(this.btOpen_Click);
             // 
-            // button2
+            // btLoadSeikyu
             // 
-            this.button2.Location = new System.Drawing.Point(304, 24);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btLoadSeikyu.Location = new System.Drawing.Point(145, 25);
+            this.btLoadSeikyu.Name = "btLoadSeikyu";
+            this.btLoadSeikyu.Size = new System.Drawing.Size(104, 23);
+            this.btLoadSeikyu.TabIndex = 5;
+            this.btLoadSeikyu.Text = "請求情報読込";
+            this.btLoadSeikyu.UseVisualStyleBackColor = true;
+            this.btLoadSeikyu.Click += new System.EventHandler(this.button2_Click);
             // 
             // Kaishu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1007, 569);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btLoadSeikyu);
             this.Controls.Add(this.btOpen);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
@@ -174,16 +110,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.Button btOpen;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btLoadSeikyu;
     }
 }
