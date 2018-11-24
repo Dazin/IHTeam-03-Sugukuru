@@ -1,5 +1,4 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,14 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
+using MySql.Data.MySqlClient;
 
 namespace Sugukuru
 {
     public partial class Kaishu : Form
     {
+        String conStr;
         public Kaishu()
         {
             InitializeComponent();
+            this.conStr = ConfigurationManager.AppSettings["DdConKey"];
         }
 
         private void Kaishu_Load(object sender, EventArgs e)
@@ -114,26 +116,28 @@ namespace Sugukuru
         private void button2_Click(object sender, EventArgs e)
         {
             //抽出データ格納データセット作成
-            DataSet dSet = new DataSet("gakuseki");
+            DataSet dSet = new DataSet("data");
             // DB接続オブジェクト作成
             MySqlConnection con = new MySqlConnection(this.conStr);
             //DB接続
             con.Open();
             //SQL作成
-            String sql = "select * from gakuseki where gno = " + "" + TxGno.Text + "";
+            String sql = "SELECT * FROM 顧客情報";
             //SQL文と接続情報を指定し、データアダプタ作成
             MySqlDataAdapter mAdp = new MySqlDataAdapter(sql, con);
             //抽出データをデータセットへ取得
-            mAdp.Fill(dSet, "gakuseki");
+            mAdp.Fill(dSet, "data");
             //DB切断
             con.Close();
             //抽出件数チェック
-            int ResCnt = dSet.Tables["gakuseki"].Rows.Count;
+            int ResCnt = dSet.Tables["data"].Rows.Count;
             if (ResCnt != 0)
             {
-                TxGname.Text = dSet.Tables["gakuseki"].Rows[0]["gname"].ToString();
-                TxZip.Text = dSet.Tables["gakuseki"].Rows[0]["zip"].ToString();
-                TxAddr.Text = dSet.Tables["gakuseki"].Rows[0]["addr"].ToString();
+                DataTable data = dSet.Tables["data"];
+               String kCode = data.Rows[0]["顧客コード"].ToString();
+    //            TxZip.Text = data.Rows[0]["zip"].ToString();
+  //              TxAddr.Text = data.Rows[0]["addr"].ToString();
+                dataGridView1.Rows.Add(kCode, "太郎", "080-XXXX-XXXX", "100,000", "100,000", "30年11月27日", "20,000", "80,000", "未回収");
             }
         }
     }
