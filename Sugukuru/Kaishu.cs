@@ -15,7 +15,6 @@ namespace Sugukuru
     public partial class Kaishu : Form
     {
         String conStr;
-        Boolean flag = false;
         public Kaishu()
         {
             InitializeComponent();
@@ -35,6 +34,9 @@ namespace Sugukuru
             dataGridView1.Columns.Add("mikaishu", "未回収金額");
             dataGridView1.Columns[6].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             dataGridView1.Columns.Add("status", "状態");
+
+            btLoadSeikyu_Click(sender, e);
+
 //            dataGridView1.Rows.Add("10001", "太郎", "080-XXXX-XXXX",  "100,000", "30年11月27日", "20,000", "80,000", "未回収");
         }
 
@@ -54,7 +56,7 @@ namespace Sugukuru
             con.Open();
             //SQL作成
             String sql = "SELECT k.顧客コード, k.顧客名, k.電話番号, s.請求金額 FROM 請求明細 s, 受注 j, 顧客情報 k "
-                +"WHERE s.受注コード = j.受注コード AND j.顧客コード = k.顧客コード"
+                + "WHERE s.受注コード = j.受注コード AND j.顧客コード = k.顧客コード AND s.消込状態 = 0"
                 ;
             //SQL文と接続情報を指定し、データアダプタ作成
             MySqlDataAdapter mAdp = new MySqlDataAdapter(sql, con);
@@ -65,14 +67,15 @@ namespace Sugukuru
             //抽出件数チェック
             DataTable data = dSet.Tables["data"];
             int ResCnt = data.Rows.Count;
-            if (ResCnt != 0)
+            for (int i = 0; i < ResCnt; i++)
+//                if (ResCnt != 0)
             {
-                String kCode = data.Rows[0]["顧客コード"].ToString();
-                String kName = data.Rows[0]["顧客名"].ToString();
-                String kTel = data.Rows[0]["電話番号"].ToString();
-                String sPrice = String.Format("{0:#,0}", data.Rows[0]["請求金額"]);
-                String nyukinDate = "30年11月27日";//入金があったらここに格納する。
-                String nyukinGaku = "3,100,000"; //入金学をここに入れる。
+                String kCode = data.Rows[i]["顧客コード"].ToString();
+                String kName = data.Rows[i]["顧客名"].ToString();
+                String kTel = data.Rows[i]["電話番号"].ToString();
+                String sPrice = String.Format("{0:#,0}", data.Rows[i]["請求金額"]);
+                String nyukinDate = "未入金";//入金があったらここに格納する。 //30年11月27日
+                String nyukinGaku = "0"; //入金学をここに入れる。//3,100,000
                 String mikaishu = "不明";
                 String status = "未回収";
                 Decimal num1 = 0;
@@ -80,7 +83,7 @@ namespace Sugukuru
                 Decimal num3 = 0;
                 if (Decimal.TryParse(sPrice, out num1) == true && Decimal.TryParse(nyukinGaku, out num2) == true)
                 { 
-                     num3 = num1 - num2;
+                    num3 = num1 - num2;
                     mikaishu = String.Format("{0:#,0}", num3);
                     if(num3 <0) {
                         status = "過入金";
@@ -194,8 +197,9 @@ namespace Sugukuru
                                     // クローズ
                                     cmd.Connection.Close();
 
-                                    //インサート終了後、flagをtrueにする。
-                                    flag = true;
+                                    //インサート終了後
+
+                                    LoadZenginToDGV();
 
                                     break;
                                 default:
@@ -209,6 +213,125 @@ namespace Sugukuru
 
             }
 
+        }
+
+
+        private void LoadZenginToDGV()
+        {
+            // DGVの行を空にする。
+            dataGridView1.Rows.Clear();
+
+            //抽出データ格納データセット作成
+            DataSet dSet = new DataSet("data");
+            // DB接続オブジェクト作成
+            MySqlConnection con = new MySqlConnection(this.conStr);
+            //DB接続
+            con.Open();
+            //SQL作成
+            String sql = "SELECT k.顧客コード, k.顧客名, k.電話番号, s.請求金額, z.金額, CONCAT('平成',SUBSTRING( z.起算日, 1, 2 ) , '年',SUBSTRING( z.起算日, 3, 2 ) , '月',SUBSTRING( z.起算日, 5, 2 ) , '日') AS 起算日  FROM 請求明細 s, 受注 j, 顧客情報 k, (SELECT TRIM('0' FROM 振込依頼人コード)  AS 顧客コード,SUM(金額) AS 金額,起算日 FROM 全銀 GROUP BY 振込依頼人コード) z WHERE s.受注コード = j.受注コード"
++" AND j.顧客コード = k.顧客コード"
++" AND z.顧客コード = k.顧客コード AND s.消込状態 = 0"
+                ;
+            //SQL文と接続情報を指定し、データアダプタ作成
+            MySqlDataAdapter mAdp = new MySqlDataAdapter(sql, con);
+            //抽出データをデータセットへ取得
+            mAdp.Fill(dSet, "data");
+            //DB切断
+            con.Close();
+            //抽出件数チェック
+            DataTable data = dSet.Tables["data"];
+            int ResCnt = data.Rows.Count;
+            //  if (ResCnt != 0)
+            for (int i = 0; i < ResCnt; i++)
+            {
+                String kCode = data.Rows[i]["顧客コード"].ToString();
+                String kName = data.Rows[i]["顧客名"].ToString();
+                String kTel = data.Rows[i]["電話番号"].ToString();
+                String sPrice = String.Format("{0:#,0}", data.Rows[i]["請求金額"]);
+                String nyukinDate = data.Rows[i]["起算日"].ToString(); ;//入金があったらここに格納する。
+                String nyukinGaku = String.Format("{0:#,0}", data.Rows[i]["金額"]); //入金学をここに入れる。
+                String mikaishu = sPrice;
+                String status = "未回収";
+                Decimal num1 = 0;
+                Decimal num2 = 0;
+                Decimal num3 = 0;
+                if (Decimal.TryParse(sPrice, out num1) == true && Decimal.TryParse(nyukinGaku, out num2) == true)
+                {
+                    num3 = num1 - num2;
+                    mikaishu = String.Format("{0:#,0}", num3);
+                    if (num3 < 0)
+                    {
+                        status = "過入金";
+                    }
+                    else if (num3 == 0)
+                    {
+                        status = "消込可能";
+                    }
+                    else { status = "不足"; }
+                }
+                dataGridView1.Rows.Add(kCode, kName, kTel, sPrice, nyukinDate, nyukinGaku, mikaishu, status);
+            }
+        }
+
+        private void btKeshikomi_Click(object sender, EventArgs e)
+        {
+            //抽出データ格納データセット作成
+            DataSet dSet = new DataSet("data");
+            // DB接続オブジェクト作成
+            MySqlConnection con = new MySqlConnection(this.conStr);
+            //DB接続
+            con.Open();
+            //SQL作成
+            String sql = "SELECT k.顧客コード, k.顧客名, k.電話番号, s.請求金額, z.金額, CONCAT('平成',SUBSTRING( z.起算日, 1, 2 ) , '年',SUBSTRING( z.起算日, 3, 2 ) , '月',SUBSTRING( z.起算日, 5, 2 ) , '日') AS 起算日  FROM 請求明細 s, 受注 j, 顧客情報 k, (SELECT TRIM('0' FROM 振込依頼人コード)  AS 顧客コード,SUM(金額) AS 金額,起算日 FROM 全銀 GROUP BY 振込依頼人コード) z WHERE s.受注コード = j.受注コード"
++ " AND j.顧客コード = k.顧客コード"
++ " AND z.顧客コード = k.顧客コード AND s.消込状態 = 0"
+                ;
+            //SQL文と接続情報を指定し、データアダプタ作成
+            MySqlDataAdapter mAdp = new MySqlDataAdapter(sql, con);
+            //抽出データをデータセットへ取得
+            mAdp.Fill(dSet, "data");
+            //DB切断
+            con.Close();
+            //抽出件数チェック
+            DataTable data = dSet.Tables["data"];
+            int ResCnt = data.Rows.Count;
+            //  if (ResCnt != 0)
+            for (int i = 0; i < ResCnt; i++)
+            {
+                String kCode = data.Rows[i]["顧客コード"].ToString();
+                String sPrice = String.Format("{0:#,0}", data.Rows[i]["請求金額"]);
+                String nyukinGaku = String.Format("{0:#,0}", data.Rows[i]["金額"]); //入金学をここに入れる。
+                String mikaishu = sPrice;
+                String status = "未回収";
+                Decimal num1 = 0;
+                Decimal num2 = 0;
+                Decimal num3 = 0;
+                if (Decimal.TryParse(sPrice, out num1) == true && Decimal.TryParse(nyukinGaku, out num2) == true)
+                {
+                    num3 = num1 - num2;
+                    mikaishu = String.Format("{0:#,0}", num3);
+                if (num3 == 0)
+                    {
+                        status = "消込可能";
+                        //ここでUPDATE文を走らせる。
+                        //テーブルの中身を空にする。
+                        con = new MySqlConnection(this.conStr);
+                        // コマンドを作成
+                        MySqlCommand cmd = new MySqlCommand("UPDATE 請求明細 s INNER JOIN 受注 j ON j.受注コード = s.受注コード SET 消込状態 = 1 WHERE j.顧客コード = " + kCode, con);
+                        // オープン
+                        cmd.Connection.Open();
+                        // 実行
+                        cmd.ExecuteNonQuery();
+                        // クローズ
+                        cmd.Connection.Close();
+                    }
+                 }
+//                dataGridView1.Rows.Add(kCode, kName, kTel, sPrice, nyukinDate, nyukinGaku, mikaishu, status);
+            }
+
+
+            //datagridviewを再読み込みする。
+            LoadZenginToDGV();
         }
     }
 }

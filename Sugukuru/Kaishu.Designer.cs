@@ -30,7 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btKeshikomi = new System.Windows.Forms.Button();
             this.btLoadZengin = new System.Windows.Forms.Button();
             this.btLoadSeikyu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -58,18 +58,19 @@
             this.dataGridView1.Size = new System.Drawing.Size(956, 444);
             this.dataGridView1.TabIndex = 2;
             // 
-            // button1
+            // btKeshikomi
             // 
-            this.button1.Location = new System.Drawing.Point(25, 513);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 39);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "一括消し込みする";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btKeshikomi.Location = new System.Drawing.Point(25, 513);
+            this.btKeshikomi.Name = "btKeshikomi";
+            this.btKeshikomi.Size = new System.Drawing.Size(117, 39);
+            this.btKeshikomi.TabIndex = 3;
+            this.btKeshikomi.Text = "一括消し込みする";
+            this.btKeshikomi.UseVisualStyleBackColor = true;
+            this.btKeshikomi.Click += new System.EventHandler(this.btKeshikomi_Click);
             // 
             // btLoadZengin
             // 
-            this.btLoadZengin.Location = new System.Drawing.Point(255, 25);
+            this.btLoadZengin.Location = new System.Drawing.Point(146, 25);
             this.btLoadZengin.Name = "btLoadZengin";
             this.btLoadZengin.Size = new System.Drawing.Size(103, 23);
             this.btLoadZengin.TabIndex = 4;
@@ -79,12 +80,13 @@
             // 
             // btLoadSeikyu
             // 
-            this.btLoadSeikyu.Location = new System.Drawing.Point(145, 25);
+            this.btLoadSeikyu.Location = new System.Drawing.Point(476, 25);
             this.btLoadSeikyu.Name = "btLoadSeikyu";
             this.btLoadSeikyu.Size = new System.Drawing.Size(104, 23);
             this.btLoadSeikyu.TabIndex = 5;
-            this.btLoadSeikyu.Text = "請求情報読込";
+            this.btLoadSeikyu.Text = "請求情報再読込";
             this.btLoadSeikyu.UseVisualStyleBackColor = true;
+            this.btLoadSeikyu.Visible = false;
             this.btLoadSeikyu.Click += new System.EventHandler(this.btLoadSeikyu_Click);
             // 
             // Kaishu
@@ -94,7 +96,7 @@
             this.ClientSize = new System.Drawing.Size(1007, 569);
             this.Controls.Add(this.btLoadSeikyu);
             this.Controls.Add(this.btLoadZengin);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btKeshikomi);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Name = "Kaishu";
@@ -110,7 +112,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btKeshikomi;
         private System.Windows.Forms.Button btLoadZengin;
         private System.Windows.Forms.Button btLoadSeikyu;
     }
