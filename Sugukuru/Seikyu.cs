@@ -19,17 +19,32 @@ namespace Sugukuru
 
         private void Shiire_Load(object sender, EventArgs e)
         {
-            DataTable table = new DataTable("Table");
+            Boolean flg = false;
+            DateTime dt = DateTime.Now;
+            IsedaDBSeikyu db = new IsedaDBSeikyu();
+            label2.Text = ""+ (dt.Month - 1).ToString() + "月度のご請求";
+            label3.Text = "" + dt.Year.ToString() +"年" + dt.Month.ToString() + "月15日";
+            dataGridView1.DataSource = db.Select_List().Tables["Seikyu"];
+            for(int i = 0;i < dataGridView1.RowCount;i++){
+                if (Convert.ToInt32(dataGridView1.Rows[i].Cells[3].Value) < 0)
+                {
+                    flg = true;
+                    break;
+                }
+            }
+            if (flg)
+            {
+                DialogResult result = MessageBox.Show("与信限度額を超過している顧客が存在します。\n請求書を即時発行してもよろしいですか？",
+                "確認",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Exclamation,
+                MessageBoxDefaultButton.Button2);
+                if (result == DialogResult.Yes)
+                {
 
-            table.Columns.Add("取引先名（敬称略）");
+                }
 
-            table.Rows.Add("服部忍者スクール株式会社");
-            table.Rows.Add("株式会社滝渕産業");
-            table.Rows.Add("株式会社伊勢田の会");
-            table.Rows.Add("株市会社竹久コーポ");
-
-
-            dataGridView1.DataSource = table;
+            }
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -43,6 +58,16 @@ namespace Sugukuru
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
