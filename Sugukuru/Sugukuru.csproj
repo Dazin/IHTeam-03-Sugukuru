@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Sugukuru</RootNamespace>
     <AssemblyName>Sugukuru</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
     <PublishUrl>publish\</PublishUrl>
@@ -68,6 +68,14 @@
     </Compile>
     <Compile Include="CreateDocument.designer.cs">
       <DependentUpon>CreateDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IsedaDBClass.cs" />
+    <Compile Include="IsedaDBSeikyu.cs" />
+    <Compile Include="JuchuMulti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JuchuMulti.Designer.cs">
+      <DependentUpon>JuchuMulti.cs</DependentUpon>
     </Compile>
     <Compile Include="Shiire.cs">
       <SubType>Form</SubType>
@@ -133,6 +141,9 @@
     </Compile>
     <EmbeddedResource Include="CreateDocument.resx">
       <DependentUpon>CreateDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JuchuMulti.resx">
+      <DependentUpon>JuchuMulti.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Shiire.resx">
       <DependentUpon>Shiire.cs</DependentUpon>
