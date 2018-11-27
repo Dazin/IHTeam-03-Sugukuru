@@ -37,9 +37,52 @@ namespace Sugukuru
 
             btLoadSeikyu_Click(sender, e);
 
-//            dataGridView1.Rows.Add("10001", "太郎", "080-XXXX-XXXX",  "100,000", "30年11月27日", "20,000", "80,000", "未回収");
+            //選択ボタン追加。
+
+            DataGridViewButtonColumn dgvButton = new DataGridViewButtonColumn();
+            dgvButton.Name = "個別消込ボタン";
+            dgvButton.HeaderText = "個別消込ボタン";
+            dgvButton.Text = "個別消込";
+            dgvButton.UseColumnTextForButtonValue = true;
+            dataGridView1.Columns.Add(dgvButton);
+
+
+            //            dataGridView1.Rows.Add("10001", "太郎", "080-XXXX-XXXX",  "100,000", "30年11月27日", "20,000", "80,000", "未回収");
         }
 
+
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 8)
+            {
+//                MessageBox.Show("チェック完了");
+                //                MessageBox.Show(e.RowIndex.ToString());
+                String kCode = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+//                MessageBox.Show(kCode);
+                //                MessageBox.Show(juchuCode);//受注コード表示。
+                //受注コードをUkeshoに渡す。
+
+                if(dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString()  == "消込可能")
+                {
+                    //消し込み処理。
+                    MySqlConnection con = new MySqlConnection(this.conStr);
+                    // コマンドを作成
+                    MySqlCommand cmd = new MySqlCommand("UPDATE 請求明細 s INNER JOIN 受注 j ON j.受注コード = s.受注コード SET 消込状態 = 1 WHERE j.顧客コード = " + kCode, con);
+                    // オープン
+                    cmd.Connection.Open();
+                    // 実行
+                    cmd.ExecuteNonQuery();
+                    // クローズ
+                    cmd.Connection.Close();
+                    LoadZenginToDGV(); //こうしｎ
+                }
+                else
+                {
+                    MessageBox.Show(dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString() +"です");
+                }
+            }
+        }
 
 
 
@@ -92,6 +135,8 @@ namespace Sugukuru
                 dataGridView1.Rows.Add(kCode, kName, kTel, sPrice, nyukinDate , nyukinGaku, mikaishu, status);
             }
         }
+
+
 
 
         private void btLoadZengin_Click(object sender, EventArgs e)
@@ -333,5 +378,6 @@ namespace Sugukuru
             //datagridviewを再読み込みする。
             LoadZenginToDGV();
         }
+        
     }
 }
