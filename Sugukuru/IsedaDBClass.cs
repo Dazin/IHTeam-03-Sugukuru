@@ -68,7 +68,6 @@ namespace Sugukuru
         public void Juchu_Insert(String SelectNo,String Custemer,String CarName,String CarGrade,String CarModelYear,String CarColor,String CarShiht,String CarDistance,String CarMoney,String CarOtehr,String CarModel,String CarDelivery,int Count)
         {
 
-            DataSet dset = new DataSet("SugukuruJuchu");
             this.StrKey = ConfigurationManager.AppSettings["DdConKey"];
             DateTime dt = DateTime.Now;
             MySqlConnection con = new MySqlConnection(this.StrKey);

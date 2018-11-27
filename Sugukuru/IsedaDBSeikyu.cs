@@ -35,8 +35,22 @@ namespace Sugukuru
             return dset;
         }
 
-        public void Seikyu_Insert(){
+        public void Seikyu_Insert(String Seikyu_Money,String title,String due_date,String date,String Custemer){
+            this.StrKey = ConfigurationManager.AppSettings["DdConKey"];
+            DateTime dt = DateTime.Now;
+            MySqlConnection con = new MySqlConnection(this.StrKey);
+            String sql2 = "INSERT INTO `請求明細`" +
+                          "(`請求金額`,`件名`,`支払い期限`,`請求状態`,`請求日`,`顧客コード`)" +
+                          "VALUES (" + Seikyu_Money + ",'" + title + "','" + due_date + "',1,'" + date + "','" + Custemer + "')";
+            con.Open();
+            MySqlCommand cmd2 = new MySqlCommand(sql2, con);
+            cmd2.ExecuteNonQuery();
+            con.Close();
+
+
+        }
 
     }
+
     }
-}
+

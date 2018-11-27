@@ -22,10 +22,11 @@ namespace Sugukuru
             Boolean flg = false;
             DateTime dt = DateTime.Now;
             IsedaDBSeikyu db = new IsedaDBSeikyu();
-            label2.Text = ""+ (dt.Month - 1).ToString() + "月度のご請求";
-            label3.Text = "" + dt.Year.ToString() +"年" + dt.Month.ToString() + "月15日";
+            label2.Text = "" + (dt.Month - 1).ToString() + "月度のご請求";
+            label3.Text = "" + dt.Year.ToString() + "年" + dt.Month.ToString() + "月15日";
             dataGridView1.DataSource = db.Select_List().Tables["Seikyu"];
-            for(int i = 0;i < dataGridView1.RowCount;i++){
+            for (int i = 0; i < dataGridView1.RowCount; i++)
+            {
                 if (Convert.ToInt32(dataGridView1.Rows[i].Cells[3].Value) < 0)
                 {
                     flg = true;
@@ -41,7 +42,11 @@ namespace Sugukuru
                 MessageBoxDefaultButton.Button2);
                 if (result == DialogResult.Yes)
                 {
-
+                    DialogResult result2 = MessageBox.Show("印刷を実行しました。",
+                    "確認",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Asterisk,
+                    MessageBoxDefaultButton.Button2);
                 }
 
             }
@@ -69,6 +74,22 @@ namespace Sugukuru
 
         private void label3_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DateTime dt = DateTime.Now;
+            IsedaDBSeikyu db = new IsedaDBSeikyu();
+            DialogResult result2 = MessageBox.Show("印刷を実行しました。",
+            "確認",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Asterisk,
+            MessageBoxDefaultButton.Button2);
+            for (int i = 0; i < dataGridView1.RowCount; i++)
+            {
+                db.Seikyu_Insert(dataGridView1.Rows[i].Cells[2].Value.ToString(), label2.Text.ToString(), dt.Year.ToString() + "-" + dt.Month.ToString() + "-15", dt.Date.ToString(), dataGridView1.Rows[i].Cells[0].Value.ToString());
+            }
 
         }
     }
