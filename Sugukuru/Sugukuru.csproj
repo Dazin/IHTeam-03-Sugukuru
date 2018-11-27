@@ -69,6 +69,18 @@
     <Compile Include="CreateDocument.designer.cs">
       <DependentUpon>CreateDocument.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form6.Designer.cs">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </Compile>
     <Compile Include="IsedaDBClass.cs" />
     <Compile Include="IsedaDBSeikyu.cs" />
     <Compile Include="JuchuMulti.cs">
@@ -76,12 +88,6 @@
     </Compile>
     <Compile Include="JuchuMulti.Designer.cs">
       <DependentUpon>JuchuMulti.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Shiire.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Shiire.designer.cs">
-      <DependentUpon>Shiire.cs</DependentUpon>
     </Compile>
     <Compile Include="Seikyu_kobetu.cs">
       <SubType>Form</SubType>
@@ -121,6 +127,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="siire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="siire.Designer.cs">
+      <DependentUpon>siire.cs</DependentUpon>
+    </Compile>
     <Compile Include="Top.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,11 +154,14 @@
     <EmbeddedResource Include="CreateDocument.resx">
       <DependentUpon>CreateDocument.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form6.resx">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="JuchuMulti.resx">
       <DependentUpon>JuchuMulti.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Shiire.resx">
-      <DependentUpon>Shiire.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Seikyu_kobetu.resx">
       <DependentUpon>Seikyu_kobetu.cs</DependentUpon>
@@ -173,6 +188,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="siire.resx">
+      <DependentUpon>siire.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Top.resx">
       <DependentUpon>Top.cs</DependentUpon>
     </EmbeddedResource>

@@ -16,7 +16,7 @@ namespace Sugukuru
 
         public DataSet Select_List()
         {
-            this.StrKey = ConfigurationManager.AppSettings["DdConKey"];
+            this.StrKey = ConfigurationManager.AppSettings["Ddconkey"];
             DateTime dt = DateTime.Now;
             DataSet dset = new DataSet("Seikyu");
             MySqlConnection con = new MySqlConnection(this.StrKey);
@@ -36,7 +36,7 @@ namespace Sugukuru
         }
 
         public void Seikyu_Insert(String Seikyu_Money,String title,String due_date,String date,String Custemer){
-            this.StrKey = ConfigurationManager.AppSettings["DdConKey"];
+            this.StrKey = ConfigurationManager.AppSettings["Ddconkey"];
             DateTime dt = DateTime.Now;
             MySqlConnection con = new MySqlConnection(this.StrKey);
             String sql2 = "INSERT INTO `請求明細`" +

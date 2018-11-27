@@ -41,9 +41,10 @@
             // 
             // btMitsumori
             // 
-            this.btMitsumori.Location = new System.Drawing.Point(99, 103);
+            this.btMitsumori.Location = new System.Drawing.Point(165, 154);
+            this.btMitsumori.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btMitsumori.Name = "btMitsumori";
-            this.btMitsumori.Size = new System.Drawing.Size(75, 23);
+            this.btMitsumori.Size = new System.Drawing.Size(125, 34);
             this.btMitsumori.TabIndex = 0;
             this.btMitsumori.Text = "見積書作成";
             this.btMitsumori.UseVisualStyleBackColor = true;
@@ -51,9 +52,10 @@
             // 
             // btUkesho
             // 
-            this.btUkesho.Location = new System.Drawing.Point(99, 68);
+            this.btUkesho.Location = new System.Drawing.Point(165, 102);
+            this.btUkesho.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btUkesho.Name = "btUkesho";
-            this.btUkesho.Size = new System.Drawing.Size(75, 23);
+            this.btUkesho.Size = new System.Drawing.Size(125, 34);
             this.btUkesho.TabIndex = 1;
             this.btUkesho.Text = "請書";
             this.btUkesho.UseVisualStyleBackColor = true;
@@ -61,9 +63,10 @@
             // 
             // btKaishu
             // 
-            this.btKaishu.Location = new System.Drawing.Point(99, 235);
+            this.btKaishu.Location = new System.Drawing.Point(165, 352);
+            this.btKaishu.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btKaishu.Name = "btKaishu";
-            this.btKaishu.Size = new System.Drawing.Size(75, 23);
+            this.btKaishu.Size = new System.Drawing.Size(125, 34);
             this.btKaishu.TabIndex = 2;
             this.btKaishu.Text = "回収";
             this.btKaishu.UseVisualStyleBackColor = true;
@@ -71,9 +74,10 @@
             // 
             // btSeikyuKobetsu
             // 
-            this.btSeikyuKobetsu.Location = new System.Drawing.Point(99, 164);
+            this.btSeikyuKobetsu.Location = new System.Drawing.Point(165, 246);
+            this.btSeikyuKobetsu.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btSeikyuKobetsu.Name = "btSeikyuKobetsu";
-            this.btSeikyuKobetsu.Size = new System.Drawing.Size(75, 23);
+            this.btSeikyuKobetsu.Size = new System.Drawing.Size(125, 34);
             this.btSeikyuKobetsu.TabIndex = 3;
             this.btSeikyuKobetsu.Text = "請求個別";
             this.btSeikyuKobetsu.UseVisualStyleBackColor = true;
@@ -81,9 +85,10 @@
             // 
             // btSeikyusho
             // 
-            this.btSeikyusho.Location = new System.Drawing.Point(99, 196);
+            this.btSeikyusho.Location = new System.Drawing.Point(165, 294);
+            this.btSeikyusho.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btSeikyusho.Name = "btSeikyusho";
-            this.btSeikyusho.Size = new System.Drawing.Size(75, 23);
+            this.btSeikyusho.Size = new System.Drawing.Size(125, 34);
             this.btSeikyusho.TabIndex = 4;
             this.btSeikyusho.Text = "請求書";
             this.btSeikyusho.UseVisualStyleBackColor = true;
@@ -91,9 +96,10 @@
             // 
             // btSeikyu
             // 
-            this.btSeikyu.Location = new System.Drawing.Point(99, 132);
+            this.btSeikyu.Location = new System.Drawing.Point(165, 198);
+            this.btSeikyu.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btSeikyu.Name = "btSeikyu";
-            this.btSeikyu.Size = new System.Drawing.Size(75, 23);
+            this.btSeikyu.Size = new System.Drawing.Size(125, 34);
             this.btSeikyu.TabIndex = 5;
             this.btSeikyu.Text = "請求";
             this.btSeikyu.UseVisualStyleBackColor = true;
@@ -101,9 +107,10 @@
             // 
             // btJuchu
             // 
-            this.btJuchu.Location = new System.Drawing.Point(99, 39);
+            this.btJuchu.Location = new System.Drawing.Point(165, 58);
+            this.btJuchu.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btJuchu.Name = "btJuchu";
-            this.btJuchu.Size = new System.Drawing.Size(75, 23);
+            this.btJuchu.Size = new System.Drawing.Size(125, 34);
             this.btJuchu.TabIndex = 6;
             this.btJuchu.Text = "受注";
             this.btJuchu.UseVisualStyleBackColor = true;
@@ -111,9 +118,10 @@
             // 
             // btCreateDocument
             // 
-            this.btCreateDocument.Location = new System.Drawing.Point(224, 39);
+            this.btCreateDocument.Location = new System.Drawing.Point(373, 58);
+            this.btCreateDocument.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btCreateDocument.Name = "btCreateDocument";
-            this.btCreateDocument.Size = new System.Drawing.Size(75, 23);
+            this.btCreateDocument.Size = new System.Drawing.Size(125, 34);
             this.btCreateDocument.TabIndex = 7;
             this.btCreateDocument.Text = "書類作成";
             this.btCreateDocument.UseVisualStyleBackColor = true;
@@ -121,9 +129,10 @@
             // 
             // btShiire
             // 
-            this.btShiire.Location = new System.Drawing.Point(224, 68);
+            this.btShiire.Location = new System.Drawing.Point(373, 102);
+            this.btShiire.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btShiire.Name = "btShiire";
-            this.btShiire.Size = new System.Drawing.Size(75, 23);
+            this.btShiire.Size = new System.Drawing.Size(125, 34);
             this.btShiire.TabIndex = 8;
             this.btShiire.Text = "仕入";
             this.btShiire.UseVisualStyleBackColor = true;
@@ -131,9 +140,9 @@
             // 
             // Top
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1333, 675);
             this.Controls.Add(this.btShiire);
             this.Controls.Add(this.btCreateDocument);
             this.Controls.Add(this.btJuchu);
@@ -143,8 +152,10 @@
             this.Controls.Add(this.btKaishu);
             this.Controls.Add(this.btUkesho);
             this.Controls.Add(this.btMitsumori);
+            this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "Top";
             this.Text = "Top";
+            this.Load += new System.EventHandler(this.Top_Load_1);
             this.ResumeLayout(false);
 
         }
