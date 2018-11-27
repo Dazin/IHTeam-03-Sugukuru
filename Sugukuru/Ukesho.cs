@@ -14,43 +14,127 @@ namespace Sugukuru
 {
     public partial class Ukesho : Form
     {
-        String conStr = "";
+        String conStr = "SERVER=127.0.0.1;DATABASE=sugukuru;UID=root;PASSWORD=;CHARSET=utf8;SslMode=None";
         public Ukesho()
         {
             InitializeComponent();
-            this.conStr = ConfigurationManager.AppSettings["DbConkey"];
         }
 
         private void Ukesho_Load(object sender, EventArgs e)
         {
-            lbClient.Text = "株式会社HAL"+"御中";
+//            String[] sWidth = new String[] { "車名", "型式", "グレード", "年式", "外装色", "内装色", "走行距離", "変速システム", "排気量", "燃料", "キズ状態", "調達希望予算", "納品先", "車輌代金", "登録手続代行費用", "自動車税", "納期" };
+            String[] sWidth = new String[] { "車名", "納品先", "車輌代金", "登録手続代行費用", "自動車税", "納期" };
+            int i = 1;
+            foreach (String str in sWidth)
+            {
+                dataGridView1.Columns.Add("car"+i, str);
+                ++i;
+            }
+            //車情報複数DGVに読み込み
+            LoadCarsInfo();
 
-            lbPrice.Text = "2,240,000円";
-            lbLimit.Text = "2018年12月25日";
-            lbWay.Text = "銀行振込";
-            lbPlace.Text = "株式会社HAL車庫";
 
-            lbCar.Text = "車名：" + "シルビア";
-            lbGrade.Text = "グレード：" + "G";
-            lbYear.Text = "年式："+"2002";
-            lbColor.Text = "カラー："+"ホワイト";
-            lbDistance.Text = "走行距離：" + "8万km";
-            lbSystem.Text = "変速システム："+"オートマ";
+                        //受注情報を取得しセット。
 
-            lbCarPrice.Text = "2,000,000円";
-            lbComission.Text = "200,000円";
-            lbTax.Text = "40,000円";
 
-            lbCarPrice2.Text = "2,000,000円";
-            lbCharges.Text = "240,000円";
-            lbPrice2.Text = "2,240,000円";
 
-            lbDateIssue.Text = "2018年11月05日";
-            lbDateOrder.Text = "2018年11月01日";
+            //抽出データ格納データセット作成
+            DataSet dSet = new DataSet("data");
+            // DB接続オブジェクト作成
+            MySqlConnection con = new MySqlConnection(this.conStr);
+            //DB接続
+            con.Open();
+            //SQL作成
+            String sql = "SELECT k.顧客コード, k.顧客名, k.電話番号, k.入金方法, s.請求金額, j.受注日, j.合計車輌代金, 合計登録手続代行費用, 合計車輌代金 + 合計登録手続代行費用 + 合計自動車税 AS 合計金額 FROM 請求明細 s, 受注 j, 顧客情報 k "
+                + "WHERE s.受注コード = j.受注コード AND j.顧客コード = k.顧客コード AND s.消込状態 = 0"
+                ;
+            //SQL文と接続情報を指定し、データアダプタ作成
+            MySqlDataAdapter mAdp = new MySqlDataAdapter(sql, con);
+            //抽出データをデータセットへ取得
+            mAdp.Fill(dSet, "data");
+            //DB切断
+            con.Close();
+            //抽出件数チェック
+            DataTable data = dSet.Tables["data"];
+            int ResCnt = data.Rows.Count;
+            if (ResCnt != 0)
+            {
+                lbClient.Text = data.Rows[0]["顧客名"].ToString() + "御中";
+                lbPrice.Text = String.Format("{0:#,0}", data.Rows[0]["合計金額"]) + "円";
+                lbPrice2.Text = lbPrice.Text;
+                lbCarPrice2.Text = String.Format("{0:#,0}", data.Rows[0]["合計車輌代金"]) + "円";
+                lbCharges.Text = String.Format("{0:#,0}", data.Rows[0]["合計登録手続代行費用"]) + "円";
+                lbWay.Text = data.Rows[0]["入金方法"].ToString();
+                lbDateOrder.Text = DateTime.Parse(data.Rows[0]["受注日"].ToString()).ToString("yyyy年MM月dd日");
 
-            lbStaff.Text = "担当:"+"鈴木";
-            lbMail.Text = "mail:Sugukuru@hal.com";
+            }
 
+
+
+
+        //    lbLimit.Text = "2018年12月25日";
+            
+       //     lbPlace.Text = "株式会社HAL車庫";
+      //      lbCar.Text = "車名：" + "シルビア";
+     //       lbGrade.Text = "グレード：" + "G";
+       //     lbYear.Text = "年式："+"2002";
+     //       lbColor.Text = "カラー："+"ホワイト";
+      //      lbDistance.Text = "走行距離：" + "8万km";
+      //      lbSystem.Text = "変速システム："+"オートマ";
+
+     //       lbCarPrice.Text = "2,000,000円";
+     //       lbComission.Text = "200,000円";
+    //        lbTax.Text = "40,000円";
+
+            
+            
+         //   lbPrice2.Text = "2,240,000円";
+
+            lbDateIssue.Text = DateTime.Today.ToString("yyyy年MM月dd日");
+
+
+            lbStaff.Text = "担当:"+"竹久";
+            lbMail.Text = "mail:sugukuru@hal.com";
+
+        }
+
+
+        private void LoadCarsInfo()
+        {
+            // DGVの行を空にする。
+            dataGridView1.Rows.Clear();
+
+            //抽出データ格納データセット作成
+            DataSet dSet = new DataSet("data");
+            // DB接続オブジェクト作成
+            MySqlConnection con = new MySqlConnection(this.conStr);
+            //DB接続
+            con.Open();
+            //SQL作成
+            String juchuCode = "1";
+            String sql = "SELECT 車名,納品先,車輌代金,登録手続代行費用,自動車税,納期 FROM 受注情報 WHERE 受注コード = " + juchuCode +";"
+                ;
+            //SQL文と接続情報を指定し、データアダプタ作成
+            MySqlDataAdapter mAdp = new MySqlDataAdapter(sql, con);
+            //抽出データをデータセットへ取得
+            mAdp.Fill(dSet, "data");
+            //DB切断
+            con.Close();
+            //抽出件数チェック
+            DataTable data = dSet.Tables["data"];
+            int ResCnt = data.Rows.Count;
+            for (int i = 0; i < ResCnt; i++)
+            //                if (ResCnt != 0)
+            {
+                //                String[] sWidth = new String[] { "車名", "納品先", "車輌代金", "登録手続代行費用", "自動車税", "納期" };
+                String carName = data.Rows[i]["車名"].ToString();
+                String s2 = data.Rows[i]["納品先"].ToString();
+                String s3 = data.Rows[i]["車輌代金"].ToString();
+                String s4 = data.Rows[i]["登録手続代行費用"].ToString();
+                String s5 = data.Rows[i]["自動車税"].ToString();
+                String s6 = data.Rows[i]["納期"].ToString();
+                dataGridView1.Rows.Add(carName,s2,s3,s4,s5,s6);
+            }
         }
     }
 }
