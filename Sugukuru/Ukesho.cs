@@ -14,11 +14,12 @@ namespace Sugukuru
 {
     public partial class Ukesho : Form
     {
-        String conStr = "SERVER=127.0.0.1;DATABASE=sugukuru;UID=root;PASSWORD=;CHARSET=utf8;SslMode=None";
+        String conStr;
         String juchuCode = "1";
         public Ukesho(String jCode)
         {
             InitializeComponent();
+            this.conStr = ConfigurationManager.AppSettings["DdConKey"];
             this.juchuCode = jCode;
         }
         public Ukesho()

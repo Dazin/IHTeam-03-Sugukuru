@@ -15,11 +15,12 @@ namespace Sugukuru
 
     public partial class UkeshoSelect : Form
     {
-        String conStr = "SERVER=127.0.0.1;DATABASE=sugukuru;UID=root;PASSWORD=;CHARSET=utf8;SslMode=None";
+        String conStr;
 
         public UkeshoSelect()
         {
             InitializeComponent();
+            this.conStr = ConfigurationManager.AppSettings["DdConKey"];
         }
         private void LoadTable()
         {
