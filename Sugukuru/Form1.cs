@@ -55,16 +55,17 @@ namespace Sugukuru
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
             DataGridView dgv = (DataGridView)sender;
             if (dgv.Columns[e.ColumnIndex].Name == "Button")
             {
-                //    MessageBox.Show(e.RowIndex.ToString());
-                string ListNo = dataGridView1.CurrentCell.RowIndex.ToString();
-                MessageBox.Show(ListNo);
-                MessageBox.Show(lbText);
+                int rowIndex = dataGridView1.CurrentCell.RowIndex;
+                String No = (dataGridView1.Rows[rowIndex].Cells[1].Value.ToString());
+                MessageBox.Show(No);
+
 
                 this.Hide();//自分自身を非表示にする
-                CreateDocument form = new Sugukuru.CreateDocument(ListNo,lbText);
+                CreateDocument form = new Sugukuru.CreateDocument(No, lbText);
                 form.ShowDialog();
                 form.Dispose();//閉じられたらリソース開放
                 this.Show();//自分自身を再表示する

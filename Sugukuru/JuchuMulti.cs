@@ -64,7 +64,7 @@ namespace Sugukuru
 
             }
             IsedaDBClass db = new IsedaDBClass();
-            db.Juchu_Insert(Code, Custemer, textBox8.Text, comboBox1.Text, textBox4.Text, textBox3.Text, JuchuShift, textBox4.Text, textBox2.Text, textBox5.Text, textBox6.Text, textBox9.Text, Count);
+            db.Juchu_Insert(Code, Custemer, textBox8.Text, comboBox1.Text, textBox4.Text, textBox3.Text, JuchuShift, textBox6.Text, textBox2.Text, textBox5.Text, textBox6.Text, textBox9.Text, Count);
             DialogResult result = MessageBox.Show("登録しました。",
             "確認",
             MessageBoxButtons.OK,

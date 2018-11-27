@@ -19,7 +19,7 @@ namespace Sugukuru
         String ConStr;
         String SQL = "";
         DateTime dtNow = DateTime.Now;
-        private string ListNo;
+        private string No;
         private string lbText;
         int iList = 0;
         DialogResult Res;
@@ -29,20 +29,20 @@ namespace Sugukuru
         String orderno = "";
         String money = "";
         String suppliers = "";
-        public CreateDocument(string ListNo,string lbText)
+        String castomerNo = "";
+        String OrderNo = "";
+        public CreateDocument(string No,string lbText)
         {
             InitializeComponent();
             this.ConStr = ConfigurationManager.AppSettings["DdConKey"];
-            this.ListNo = ListNo;
+            this.No = No;
             this.lbText = lbText;
            
         }
 
         private void CreateDocument_Load(object sender, EventArgs e)
         {
-            iList = int.Parse(ListNo);
-            iList++;
-            
+            iList = int.Parse(No);      
 
             LbYear.Text = dtNow.Year.ToString();     //現在の年を取得
             LbMonth.Text = dtNow.Month.ToString();   //現在の月を取得
@@ -105,7 +105,7 @@ namespace Sugukuru
                 label13.Text = "";
                 lbText = "";
                 SQL = "SELECT 車輌情報.受注情報コード AS No,車輌情報.車名 AS 車輌名,車輌代金.落札価格 AS 金額,車輌情報.キズ状態 AS 摘要 FROM 車輌代金 INNER JOIN 車輌情報 ON 車輌代金.車輌コード = 車輌情報.車輌コード WHERE 受注情報コード = " + iList + ";";
-                MessageBox.Show(SQL);
+            
                 MySqlConnection con = new MySqlConnection(this.ConStr);
                 con.Open();
                 DataSet dSet = new DataSet("sugukuru");
@@ -282,7 +282,7 @@ namespace Sugukuru
         private void button1_Click(object sender, EventArgs e)
         {
             dr = MessageBox.Show("印刷しますか？", "確認", MessageBoxButtons.YesNo);
-            MessageBox.Show(lbText);
+            
             if ("出荷一覧".Equals(lbText))
             {
                 if (dr == DialogResult.Yes)
@@ -299,13 +299,42 @@ namespace Sugukuru
 
                     insert.ExecuteNonQuery();
 
+                    SQL = "SELECT 受注コード FROM 受注情報 WHERE 受注情報コード = "+ iList +";";
+                   
+                   
+
+                    DataSet dSet5 = new DataSet("sugukuru");
+                    MySqlDataAdapter mAdp5 = new MySqlDataAdapter(SQL, ConStr);
+                    mAdp5.Fill(dSet5, "sugukuru");
+                    OrderNo = dSet5.Tables["sugukuru"].Rows[0]["受注コード"].ToString();
+                    
+
+                    SQL = "SELECT 顧客情報.顧客コード FROM 受注 INNER JOIN 顧客情報 ON 受注.顧客コード = 顧客情報.顧客コード WHERE 受注コード = "+ OrderNo +";";
+ 
+                    DataSet dSet3 = new DataSet("sugukuru");
+                    MySqlDataAdapter mAdp3 = new MySqlDataAdapter(SQL, ConStr);
+                    mAdp3.Fill(dSet3, "sugukuru");
+                    castomerNo = dSet3.Tables["sugukuru"].Rows[0]["顧客コード"].ToString();
+
+
+
+
+                    SQL = "UPDATE `sugukuru`.`顧客情報` SET `売掛金` = 売掛金 + "+ taxmoney +" WHERE `顧客情報`.`顧客コード` = "+ castomerNo +";";
+       
+                    DataSet dSet4 = new DataSet("sugukuru");
+                    MySqlDataAdapter mAdp4 = new MySqlDataAdapter(SQL, ConStr);
+                    MySqlCommand insert2 = new MySqlCommand(SQL, con);
+
+                    insert2.ExecuteNonQuery();
+
                     //*** DB切断
                     con.Close();
-
+                    String msg = "完了しました。";
+                    MessageBox.Show(msg);
                 }
             }
-
-
+            
+            
 
         }
 

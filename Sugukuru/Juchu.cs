@@ -111,7 +111,7 @@ namespace Sugukuru
                 Custemerflg = false;
             }
 
-            db.Juchu_Insert(JuchuCode, comboBox4.ValueMember, textBox8.Text, comboBox1.DisplayMember, textBox4.Text, textBox3.Text, JuchuShift, textBox4.Text, textBox2.Text, textBox5.Text, textBox6.Text, textBox9.Text,Count);
+            db.Juchu_Insert(JuchuCode, comboBox4.ValueMember, textBox8.Text, comboBox1.Text, textBox6.Text, textBox3.Text, JuchuShift, textBox4.Text, textBox2.Text, textBox5.Text, textBox6.Text, textBox9.Text,Count);
         }
         
         private void groupBox1_Enter(object sender, EventArgs e)
