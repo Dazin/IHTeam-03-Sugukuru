@@ -102,5 +102,14 @@ namespace Sugukuru
         {
 
         }
+
+        private void btUkeshoSelect_Click(object sender, EventArgs e)
+        {
+            this.Hide();//自分自身を非表示にする
+            Form form = new Sugukuru.UkeshoSelect();
+            form.ShowDialog();
+            form.Dispose();//閉じられたらリソース開放
+            this.Show();//自分自身を再表示する
+        }
     }
 }

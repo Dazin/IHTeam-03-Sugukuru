@@ -134,9 +134,9 @@
             this.lbCarPrice2.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lbCarPrice2.Location = new System.Drawing.Point(120, 514);
             this.lbCarPrice2.Name = "lbCarPrice2";
-            this.lbCarPrice2.Size = new System.Drawing.Size(63, 12);
+            this.lbCarPrice2.Size = new System.Drawing.Size(70, 12);
             this.lbCarPrice2.TabIndex = 46;
-            this.lbCarPrice2.Text = "2,000,000円";
+            this.lbCarPrice2.Text = "X,XXX,XXX円";
             // 
             // lbHost
             // 
@@ -184,9 +184,9 @@
             this.lbMail.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lbMail.Location = new System.Drawing.Point(459, 164);
             this.lbMail.Name = "lbMail";
-            this.lbMail.Size = new System.Drawing.Size(121, 12);
+            this.lbMail.Size = new System.Drawing.Size(109, 12);
             this.lbMail.TabIndex = 52;
-            this.lbMail.Text = "mail:Sugukuru@hal.com";
+            this.lbMail.Text = "mail:XXXXX@hal.com";
             // 
             // lbStaff
             // 
@@ -194,9 +194,9 @@
             this.lbStaff.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lbStaff.Location = new System.Drawing.Point(459, 185);
             this.lbStaff.Name = "lbStaff";
-            this.lbStaff.Size = new System.Drawing.Size(55, 12);
+            this.lbStaff.Size = new System.Drawing.Size(59, 12);
             this.lbStaff.TabIndex = 53;
-            this.lbStaff.Text = "担当:鈴木";
+            this.lbStaff.Text = "担当:XXXX";
             // 
             // button1
             // 
@@ -205,9 +205,9 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(172, 47);
             this.button1.TabIndex = 54;
-            this.button1.Text = "注文請書を作成";
+            this.button1.Text = "印刷して閉じる";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lbDateIssue
             // 
@@ -215,9 +215,9 @@
             this.lbDateIssue.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lbDateIssue.Location = new System.Drawing.Point(599, 19);
             this.lbDateIssue.Name = "lbDateIssue";
-            this.lbDateIssue.Size = new System.Drawing.Size(89, 12);
+            this.lbDateIssue.Size = new System.Drawing.Size(97, 12);
             this.lbDateIssue.TabIndex = 55;
-            this.lbDateIssue.Text = "2018年11月05日";
+            this.lbDateIssue.Text = "XXXX年XX月XX日";
             // 
             // label51
             // 
@@ -245,9 +245,9 @@
             this.lbDateOrder.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lbDateOrder.Location = new System.Drawing.Point(599, 41);
             this.lbDateOrder.Name = "lbDateOrder";
-            this.lbDateOrder.Size = new System.Drawing.Size(89, 12);
+            this.lbDateOrder.Size = new System.Drawing.Size(97, 12);
             this.lbDateOrder.TabIndex = 61;
-            this.lbDateOrder.Text = "2018年11月01日";
+            this.lbDateOrder.Text = "XXXX年XX月XX日";
             // 
             // label53
             // 
@@ -265,9 +265,9 @@
             this.lbClient.Font = new System.Drawing.Font("MS UI Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lbClient.Location = new System.Drawing.Point(14, 60);
             this.lbClient.Name = "lbClient";
-            this.lbClient.Size = new System.Drawing.Size(166, 20);
+            this.lbClient.Size = new System.Drawing.Size(121, 20);
             this.lbClient.TabIndex = 68;
-            this.lbClient.Text = "株式会社HAL御中";
+            this.lbClient.Text = "XXXXXX御中";
             // 
             // lbPrice
             // 
@@ -275,9 +275,9 @@
             this.lbPrice.Font = new System.Drawing.Font("MS UI Gothic", 12F);
             this.lbPrice.Location = new System.Drawing.Point(93, 131);
             this.lbPrice.Name = "lbPrice";
-            this.lbPrice.Size = new System.Drawing.Size(86, 16);
+            this.lbPrice.Size = new System.Drawing.Size(100, 16);
             this.lbPrice.TabIndex = 69;
-            this.lbPrice.Text = "2,240,000円";
+            this.lbPrice.Text = "X,XXX,XXX円";
             // 
             // lbLimit
             // 
@@ -295,9 +295,9 @@
             this.lbWay.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lbWay.Location = new System.Drawing.Point(93, 185);
             this.lbWay.Name = "lbWay";
-            this.lbWay.Size = new System.Drawing.Size(72, 16);
+            this.lbWay.Size = new System.Drawing.Size(48, 16);
             this.lbWay.TabIndex = 71;
-            this.lbWay.Text = "銀行振込";
+            this.lbWay.Text = "XXXX";
             // 
             // lbCharges
             // 
@@ -305,9 +305,9 @@
             this.lbCharges.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lbCharges.Location = new System.Drawing.Point(120, 538);
             this.lbCharges.Name = "lbCharges";
-            this.lbCharges.Size = new System.Drawing.Size(55, 12);
+            this.lbCharges.Size = new System.Drawing.Size(61, 12);
             this.lbCharges.TabIndex = 73;
-            this.lbCharges.Text = "240,000円";
+            this.lbCharges.Text = "XXX,XXX円";
             // 
             // lbPrice2
             // 
@@ -315,9 +315,9 @@
             this.lbPrice2.Font = new System.Drawing.Font("MS UI Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lbPrice2.Location = new System.Drawing.Point(120, 562);
             this.lbPrice2.Name = "lbPrice2";
-            this.lbPrice2.Size = new System.Drawing.Size(63, 12);
+            this.lbPrice2.Size = new System.Drawing.Size(70, 12);
             this.lbPrice2.TabIndex = 74;
-            this.lbPrice2.Text = "2,240,000円";
+            this.lbPrice2.Text = "X,XXX,XXX円";
             // 
             // dataGridView1
             // 

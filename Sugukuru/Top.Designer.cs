@@ -37,6 +37,7 @@
             this.btJuchu = new System.Windows.Forms.Button();
             this.btCreateDocument = new System.Windows.Forms.Button();
             this.btShiire = new System.Windows.Forms.Button();
+            this.btUkeshoSelect = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btMitsumori
@@ -51,12 +52,13 @@
             // 
             // btUkesho
             // 
-            this.btUkesho.Location = new System.Drawing.Point(99, 68);
+            this.btUkesho.Location = new System.Drawing.Point(437, 196);
             this.btUkesho.Name = "btUkesho";
             this.btUkesho.Size = new System.Drawing.Size(75, 23);
             this.btUkesho.TabIndex = 1;
             this.btUkesho.Text = "請書";
             this.btUkesho.UseVisualStyleBackColor = true;
+            this.btUkesho.Visible = false;
             this.btUkesho.Click += new System.EventHandler(this.btUkesho_Click);
             // 
             // btKaishu
@@ -129,11 +131,22 @@
             this.btShiire.UseVisualStyleBackColor = true;
             this.btShiire.Click += new System.EventHandler(this.btShiire_Click);
             // 
+            // btUkeshoSelect
+            // 
+            this.btUkeshoSelect.Location = new System.Drawing.Point(99, 68);
+            this.btUkeshoSelect.Name = "btUkeshoSelect";
+            this.btUkeshoSelect.Size = new System.Drawing.Size(75, 23);
+            this.btUkeshoSelect.TabIndex = 9;
+            this.btUkeshoSelect.Text = "請書選択";
+            this.btUkeshoSelect.UseVisualStyleBackColor = true;
+            this.btUkeshoSelect.Click += new System.EventHandler(this.btUkeshoSelect_Click);
+            // 
             // Top
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btUkeshoSelect);
             this.Controls.Add(this.btShiire);
             this.Controls.Add(this.btCreateDocument);
             this.Controls.Add(this.btJuchu);
@@ -160,5 +173,6 @@
         private System.Windows.Forms.Button btJuchu;
         private System.Windows.Forms.Button btCreateDocument;
         private System.Windows.Forms.Button btShiire;
+        private System.Windows.Forms.Button btUkeshoSelect;
     }
 }

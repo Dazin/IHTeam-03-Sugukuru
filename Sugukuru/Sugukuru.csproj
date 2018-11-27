@@ -139,6 +139,12 @@
     <Compile Include="Juchu.Designer.cs">
       <DependentUpon>Juchu.cs</DependentUpon>
     </Compile>
+    <Compile Include="UkeshoSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UkeshoSelect.Designer.cs">
+      <DependentUpon>UkeshoSelect.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CreateDocument.resx">
       <DependentUpon>CreateDocument.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Juchu.resx">
       <DependentUpon>Juchu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UkeshoSelect.resx">
+      <DependentUpon>UkeshoSelect.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

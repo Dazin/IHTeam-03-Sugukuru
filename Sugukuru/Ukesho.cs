@@ -15,6 +15,12 @@ namespace Sugukuru
     public partial class Ukesho : Form
     {
         String conStr = "SERVER=127.0.0.1;DATABASE=sugukuru;UID=root;PASSWORD=;CHARSET=utf8;SslMode=None";
+        String juchuCode = "1";
+        public Ukesho(String jCode)
+        {
+            InitializeComponent();
+            this.juchuCode = jCode;
+        }
         public Ukesho()
         {
             InitializeComponent();
@@ -111,8 +117,7 @@ namespace Sugukuru
             //DB接続
             con.Open();
             //SQL作成
-            String juchuCode = "1";
-            String sql = "SELECT 車名,納品先,車輌代金,登録手続代行費用,自動車税,納期 FROM 受注情報 WHERE 受注コード = " + juchuCode +";"
+            String sql = "SELECT 車名,納品先,車輌代金,登録手続代行費用,自動車税,納期 FROM 受注情報 WHERE 受注コード = " + this.juchuCode +";"
                 ;
             //SQL文と接続情報を指定し、データアダプタ作成
             MySqlDataAdapter mAdp = new MySqlDataAdapter(sql, con);
@@ -135,6 +140,11 @@ namespace Sugukuru
                 String s6 = data.Rows[i]["納期"].ToString();
                 dataGridView1.Rows.Add(carName,s2,s3,s4,s5,s6);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
