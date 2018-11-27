@@ -198,7 +198,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(303, 36);
             this.label2.TabIndex = 114;
-            this.label2.Text = "受注情報入力画面";
+            this.label2.Text = "要望情報入力画面";
             // 
             // label3
             // 
@@ -257,7 +257,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(215, 41);
             this.button1.TabIndex = 121;
-            this.button1.Text = "受注情報登録";
+            this.button1.Text = "要望情報登録";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -317,7 +317,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(257, 30);
             this.button2.TabIndex = 126;
-            this.button2.Text = "左記の顧客で複数受注";
+            this.button2.Text = "左記の顧客で複数保存";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 

@@ -78,6 +78,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(164, 26);
             this.comboBox1.TabIndex = 150;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label10
             // 
@@ -105,7 +106,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(215, 41);
             this.button1.TabIndex = 146;
-            this.button1.Text = "受注情報登録";
+            this.button1.Text = "要望情報登録";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -146,7 +147,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(303, 36);
             this.label2.TabIndex = 140;
-            this.label2.Text = "受注情報入力画面";
+            this.label2.Text = "要望情報入力画面";
             // 
             // radioButton2
             // 
@@ -345,7 +346,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(215, 41);
             this.button3.TabIndex = 163;
-            this.button3.Text = "受注登録終了";
+            this.button3.Text = "要望登録終了";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 

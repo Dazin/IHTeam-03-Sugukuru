@@ -18,7 +18,7 @@ namespace Sugukuru
 
         public DataSet Select_Custemer()
         {
-            this.StrKey = ConfigurationManager.AppSettings["DdConKey"];
+            this.StrKey = ConfigurationManager.AppSettings["Ddconkey"];
             DateTime dt = DateTime.Now;
             DataSet dset = new DataSet("Custemer");
             MySqlConnection con = new MySqlConnection(this.StrKey);
@@ -35,7 +35,7 @@ namespace Sugukuru
         public String Juchu_Select()
         {
             DataSet dset = new DataSet("SugukuruJuchu");
-            this.StrKey = ConfigurationManager.AppSettings["DdConKey"];
+            this.StrKey = ConfigurationManager.AppSettings["Ddconkey"];
             DateTime dt = DateTime.Now;
             MySqlConnection con = new MySqlConnection(this.StrKey);
             String Selectsql = "SELECT MAX(`受注コード`)  + 1 as Code FROM `受注`";
@@ -51,7 +51,7 @@ namespace Sugukuru
         {
 
             DataSet dset = new DataSet("SugukuruJuchu");
-            this.StrKey = ConfigurationManager.AppSettings["DdConKey"];
+            this.StrKey = ConfigurationManager.AppSettings["Ddconkey"];
             DateTime dt = DateTime.Now;
             MySqlConnection con = new MySqlConnection(this.StrKey);
 
@@ -68,7 +68,7 @@ namespace Sugukuru
         public void Juchu_Insert(String SelectNo,String Custemer,String CarName,String CarGrade,String CarModelYear,String CarColor,String CarShiht,String CarDistance,String CarMoney,String CarOtehr,String CarModel,String CarDelivery,int Count)
         {
 
-            this.StrKey = ConfigurationManager.AppSettings["DdConKey"];
+            this.StrKey = ConfigurationManager.AppSettings["Ddconkey"];
             DateTime dt = DateTime.Now;
             MySqlConnection con = new MySqlConnection(this.StrKey);
             String sql2 = "INSERT INTO `受注情報`" +

@@ -64,22 +64,34 @@ namespace Sugukuru
 
             }
             IsedaDBClass db = new IsedaDBClass();
-            db.Juchu_Insert(Code, Custemer, textBox8.Text, comboBox1.DisplayMember, textBox4.Text, textBox3.Text, JuchuShift, textBox4.Text, textBox2.Text, textBox5.Text, textBox6.Text, textBox9.Text, Count);
-
-            this.Close();
+            db.Juchu_Insert(Code, Custemer, textBox8.Text, comboBox1.Text, textBox4.Text, textBox3.Text, JuchuShift, textBox4.Text, textBox2.Text, textBox5.Text, textBox6.Text, textBox9.Text, Count);
+            DialogResult result = MessageBox.Show("登録しました。",
+            "確認",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Exclamation,
+            MessageBoxDefaultButton.Button2);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("受注を完了してもよろしいですか？",
             "確認",
-            MessageBoxButtons.OK,
+            MessageBoxButtons.OKCancel,
             MessageBoxIcon.Exclamation,
             MessageBoxDefaultButton.Button2);
             if (result == DialogResult.OK)
             {
                 this.Close();
             }
+            else if (result == DialogResult.Cancel)
+            {
+
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
