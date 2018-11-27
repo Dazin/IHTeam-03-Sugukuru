@@ -48,12 +48,10 @@
             this.label52 = new System.Windows.Forms.Label();
             this.lbDateOrder = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
-            this.label54 = new System.Windows.Forms.Label();
             this.lbClient = new System.Windows.Forms.Label();
             this.lbPrice = new System.Windows.Forms.Label();
             this.lbLimit = new System.Windows.Forms.Label();
             this.lbWay = new System.Windows.Forms.Label();
-            this.lbPlace = new System.Windows.Forms.Label();
             this.lbCharges = new System.Windows.Forms.Label();
             this.lbPrice2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -261,16 +259,6 @@
             this.label53.TabIndex = 60;
             this.label53.Text = "注文日時:";
             // 
-            // label54
-            // 
-            this.label54.AutoSize = true;
-            this.label54.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label54.Location = new System.Drawing.Point(15, 212);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(56, 16);
-            this.label54.TabIndex = 62;
-            this.label54.Text = "納品先";
-            // 
             // lbClient
             // 
             this.lbClient.AutoSize = true;
@@ -311,16 +299,6 @@
             this.lbWay.TabIndex = 71;
             this.lbWay.Text = "銀行振込";
             // 
-            // lbPlace
-            // 
-            this.lbPlace.AutoSize = true;
-            this.lbPlace.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lbPlace.Location = new System.Drawing.Point(93, 212);
-            this.lbPlace.Name = "lbPlace";
-            this.lbPlace.Size = new System.Drawing.Size(133, 16);
-            this.lbPlace.TabIndex = 72;
-            this.lbPlace.Text = "株式会社HAL車庫";
-            // 
             // lbCharges
             // 
             this.lbCharges.AutoSize = true;
@@ -345,12 +323,12 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(19, 244);
+            this.dataGridView1.Location = new System.Drawing.Point(19, 216);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(669, 250);
+            this.dataGridView1.Size = new System.Drawing.Size(669, 284);
             this.dataGridView1.TabIndex = 75;
             // 
             // Ukesho
@@ -362,12 +340,10 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lbPrice2);
             this.Controls.Add(this.lbCharges);
-            this.Controls.Add(this.lbPlace);
             this.Controls.Add(this.lbWay);
             this.Controls.Add(this.lbLimit);
             this.Controls.Add(this.lbPrice);
             this.Controls.Add(this.lbClient);
-            this.Controls.Add(this.label54);
             this.Controls.Add(this.lbDateOrder);
             this.Controls.Add(this.label53);
             this.Controls.Add(this.label52);
@@ -420,12 +396,10 @@
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.Label lbDateOrder;
         private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Label lbClient;
         private System.Windows.Forms.Label lbPrice;
         private System.Windows.Forms.Label lbLimit;
         private System.Windows.Forms.Label lbWay;
-        private System.Windows.Forms.Label lbPlace;
         private System.Windows.Forms.Label lbCharges;
         private System.Windows.Forms.Label lbPrice2;
         private System.Windows.Forms.DataGridView dataGridView1;
