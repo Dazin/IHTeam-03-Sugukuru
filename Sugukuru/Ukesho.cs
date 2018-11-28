@@ -112,7 +112,6 @@ namespace Sugukuru
 
             int totalCarPrice = 0;
             int totalCharge = 0;
-            int totalPrice = 0;
 
             for (int i = 0; i < ResCnt; i++){
                 //                String[] sWidth = new String[] { "車名", "納品先", "車輌代金", "登録手続代行費用", "自動車税", "納期" };

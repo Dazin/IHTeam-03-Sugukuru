@@ -12,7 +12,7 @@ using MySql.Data.MySqlClient;
 
 namespace Sugukuru
 {
-    public partial class mitumori : Form
+    public partial class Mitsumori : Form
     {
         private string Constr;
         string name;
@@ -20,7 +20,7 @@ namespace Sugukuru
         string num;
         int cnt;
 
-        public mitumori(string name,string date)
+        public Mitsumori(string name,string date)
         {
             InitializeComponent();
             this.Constr = ConfigurationManager.AppSettings["Ddconkey"];

@@ -1,6 +1,6 @@
 ﻿namespace Sugukuru
 {
-    partial class mitumori
+    partial class Mitsumori
     {
         /// <summary>
         /// 必要なデザイナー変数です。
@@ -341,15 +341,12 @@
             this.label8.TabIndex = 107;
             this.label8.Text = "円";
             // 
-            // noukitb
-            // 
             this.noukitb.Location = new System.Drawing.Point(87, 815);
             this.noukitb.Name = "noukitb";
             this.noukitb.Size = new System.Drawing.Size(150, 25);
             this.noukitb.TabIndex = 108;
             // 
             // mitumori
-            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
@@ -383,7 +380,7 @@
             this.Controls.Add(this.namelb);
             this.Controls.Add(this.label2);
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.Name = "mitumori";
+            this.Name = "Mitsumori";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Gtable)).EndInit();

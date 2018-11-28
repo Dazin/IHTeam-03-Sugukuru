@@ -1,6 +1,6 @@
 ﻿namespace Sugukuru
 {
-    partial class Form6
+    partial class MitsumoriSelect
     {
         /// <summary>
         /// Required designer variable.
@@ -79,7 +79,7 @@
             this.dateBox.Size = new System.Drawing.Size(100, 19);
             this.dateBox.TabIndex = 4;
             // 
-            // Form6
+            // MitsumoriSelect
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -89,9 +89,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Gtable);
             this.Controls.Add(this.button1);
-            this.Name = "Form6";
-            this.Text = "Form6";
-            this.Load += new System.EventHandler(this.Form6_Load);
+            this.Name = "MitsumoriSelect";
+            this.Text = "MitsumoriSelect";
+            this.Load += new System.EventHandler(this.MitsumoriSelect_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Gtable)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

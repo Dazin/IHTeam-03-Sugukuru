@@ -1,6 +1,6 @@
 ﻿namespace Sugukuru
 {
-    partial class siire
+    partial class Shiire
     {
         /// <summary>
         /// Required designer variable.
@@ -149,7 +149,7 @@
             this.Column6.HeaderText = "仕入先";
             this.Column6.Name = "Column6";
             // 
-            // siire
+            // Shiire
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -162,9 +162,9 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.k_table);
             this.Controls.Add(this.label1);
-            this.Name = "siire";
-            this.Text = "siire";
-            this.Load += new System.EventHandler(this.siire_Load);
+            this.Name = "Shiire";
+            this.Text = "Shiire";
+            this.Load += new System.EventHandler(this.Shiire_Load);
             ((System.ComponentModel.ISupportInitialize)(this.k_table)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.c_table)).EndInit();
             this.ResumeLayout(false);

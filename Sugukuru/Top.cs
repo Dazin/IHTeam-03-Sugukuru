@@ -20,7 +20,7 @@ namespace Sugukuru
         private void btMitsumori_Click(object sender, EventArgs e)
         {
             this.Hide();//自分自身を非表示にする
-            Form form = new Sugukuru.Form6();
+            Form form = new Sugukuru.MitsumoriSelect();
             form.ShowDialog();
             form.Dispose();//閉じられたらリソース開放
             this.Show();//自分自身を再表示する
@@ -92,7 +92,7 @@ namespace Sugukuru
         private void btShiire_Click(object sender, EventArgs e)
         {
             this.Hide();//自分自身を非表示にする
-            Form form = new Sugukuru.siire();
+            Form form = new Sugukuru.Shiire();
             form.ShowDialog();
             form.Dispose();//閉じられたらリソース開放
             this.Show();//自分自身を再表示する
@@ -112,6 +112,15 @@ namespace Sugukuru
         {
             this.Hide();//自分自身を非表示にする
             Form form = new Sugukuru.UkeshoSelect();
+            form.ShowDialog();
+            form.Dispose();//閉じられたらリソース開放
+            this.Show();//自分自身を再表示する
+        }
+
+        private void btTest_Click(object sender, EventArgs e)
+        {
+            this.Hide();//自分自身を非表示にする
+            Form form = new Sugukuru.All();
             form.ShowDialog();
             form.Dispose();//閉じられたらリソース開放
             this.Show();//自分自身を再表示する

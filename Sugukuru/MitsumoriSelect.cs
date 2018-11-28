@@ -13,13 +13,13 @@ using MySql.Data.MySqlClient;
 
 namespace Sugukuru
 {
-    public partial class Form6 : Form
+    public partial class MitsumoriSelect : Form
     {
         private string Constr;
         string name;
         string date;
 
-        public Form6()
+        public MitsumoriSelect()
         {
             InitializeComponent();
             this.Constr = ConfigurationManager.AppSettings["Ddconkey"];
@@ -27,14 +27,14 @@ namespace Sugukuru
 
         private void button1_Click(object sender, EventArgs e)
         {
-            mitumori a = new mitumori(name,date);
+            Mitsumori a = new Mitsumori(name,date);
             this.Hide();
             a.ShowDialog();
             a.Dispose();
             this.Show();
         }
 
-        private void Form6_Load(object sender, EventArgs e)
+        private void MitsumoriSelect_Load(object sender, EventArgs e)
         {
             String sql = "SELECT `顧客名`,`受注日` FROM `受注` inner join `顧客情報` on `受注`.`顧客コード` = `顧客情報`.`顧客コード`;";
             DataSet dset = new DataSet("受注");

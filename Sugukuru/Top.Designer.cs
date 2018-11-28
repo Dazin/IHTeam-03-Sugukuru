@@ -38,6 +38,7 @@
             this.btCreateDocument = new System.Windows.Forms.Button();
             this.btShiire = new System.Windows.Forms.Button();
             this.btUkeshoSelect = new System.Windows.Forms.Button();
+            this.btTest = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btMitsumori
@@ -141,11 +142,22 @@
             this.btUkeshoSelect.UseVisualStyleBackColor = true;
             this.btUkeshoSelect.Click += new System.EventHandler(this.btUkeshoSelect_Click);
             // 
+            // btTest
+            // 
+            this.btTest.Location = new System.Drawing.Point(265, 256);
+            this.btTest.Name = "btTest";
+            this.btTest.Size = new System.Drawing.Size(75, 23);
+            this.btTest.TabIndex = 10;
+            this.btTest.Text = "TEST";
+            this.btTest.UseVisualStyleBackColor = true;
+            this.btTest.Click += new System.EventHandler(this.btTest_Click);
+            // 
             // Top
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btTest);
             this.Controls.Add(this.btUkeshoSelect);
             this.Controls.Add(this.btShiire);
             this.Controls.Add(this.btCreateDocument);
@@ -175,5 +187,6 @@
         private System.Windows.Forms.Button btCreateDocument;
         private System.Windows.Forms.Button btShiire;
         private System.Windows.Forms.Button btUkeshoSelect;
+        private System.Windows.Forms.Button btTest;
     }
 }
