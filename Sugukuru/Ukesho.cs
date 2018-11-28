@@ -52,8 +52,8 @@ namespace Sugukuru
             //DB接続
             con.Open();
             //SQL作成
-            String sql = "SELECT k.顧客コード, k.顧客名, k.電話番号, k.入金方法, s.請求金額, j.受注日, j.合計車輌代金, 合計登録手続代行費用, 合計車輌代金 + 合計登録手続代行費用 + 合計自動車税 AS 合計金額 FROM 請求明細 s, 受注 j, 顧客情報 k "
-                + "WHERE s.受注コード = j.受注コード AND j.顧客コード = k.顧客コード AND s.消込状態 = 0"
+            String sql = "SELECT k.顧客コード, k.顧客名, k.電話番号, k.入金方法, j.受注日, j.合計車輌代金, 合計登録手続代行費用, 合計車輌代金 + 合計登録手続代行費用 + 合計自動車税 AS 合計金額 FROM 請求明細 s, 受注 j, 顧客情報 k "
+                + "WHERE j.顧客コード = k.顧客コード"
                 ;
             //SQL文と接続情報を指定し、データアダプタ作成
             MySqlDataAdapter mAdp = new MySqlDataAdapter(sql, con);
