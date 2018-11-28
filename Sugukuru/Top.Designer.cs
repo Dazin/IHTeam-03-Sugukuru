@@ -148,7 +148,7 @@
             this.btTest.Name = "btTest";
             this.btTest.Size = new System.Drawing.Size(75, 23);
             this.btTest.TabIndex = 10;
-            this.btTest.Text = "TEST";
+            this.btTest.Text = "新Top";
             this.btTest.UseVisualStyleBackColor = true;
             this.btTest.Click += new System.EventHandler(this.btTest_Click);
             // 

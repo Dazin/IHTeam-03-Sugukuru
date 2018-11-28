@@ -15,6 +15,7 @@ namespace Sugukuru
         public All()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void btUkeshoSelect_Click(object sender, EventArgs e)
@@ -46,6 +47,36 @@ namespace Sugukuru
         private void btMitsumori_Click(object sender, EventArgs e)
         {
             openForm(new Sugukuru.MitsumoriSelect());
+        }
+
+        private void btSeikyu_Click(object sender, EventArgs e)
+        {
+            openForm(new Sugukuru.Seikyu());
+        }
+
+        private void btSeikyuKobetsu_Click(object sender, EventArgs e)
+        {
+            openForm(new Sugukuru.Seikyu_kobetu());
+        }
+
+        private void btSeikyusho_Click(object sender, EventArgs e)
+        {
+            openForm(new Sugukuru.Seikyusho());
+        }
+
+        private void btKaishu_Click(object sender, EventArgs e)
+        {
+            openForm(new Sugukuru.Kaishu());
+        }
+
+        private void btCreateDocument_Click(object sender, EventArgs e)
+        {
+            openForm(new Sugukuru.Form1());
+        }
+
+        private void btShiire_Click(object sender, EventArgs e)
+        {
+            openForm(new Sugukuru.Shiire());
         }
     }
 }
