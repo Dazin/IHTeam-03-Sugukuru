@@ -63,6 +63,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="All.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="All.Designer.cs">
+      <DependentUpon>All.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateDocument.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,11 +81,11 @@
     <Compile Include="Form1.designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form6.cs">
+    <Compile Include="MitsumoriSelect.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form6.Designer.cs">
-      <DependentUpon>Form6.cs</DependentUpon>
+    <Compile Include="MitsumoriSelect.Designer.cs">
+      <DependentUpon>MitsumoriSelect.cs</DependentUpon>
     </Compile>
     <Compile Include="IsedaDBClass.cs" />
     <Compile Include="IsedaDBSeikyu.cs" />
@@ -121,11 +127,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="siire.cs">
+    <Compile Include="Shiire.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="siire.Designer.cs">
-      <DependentUpon>siire.cs</DependentUpon>
+    <Compile Include="Shiire.Designer.cs">
+      <DependentUpon>Shiire.cs</DependentUpon>
     </Compile>
     <Compile Include="Top.cs">
       <SubType>Form</SubType>
@@ -151,14 +157,17 @@
     <Compile Include="UkeshoSelect.Designer.cs">
       <DependentUpon>UkeshoSelect.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="All.resx">
+      <DependentUpon>All.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateDocument.resx">
       <DependentUpon>CreateDocument.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form6.resx">
-      <DependentUpon>Form6.cs</DependentUpon>
+    <EmbeddedResource Include="MitsumoriSelect.resx">
+      <DependentUpon>MitsumoriSelect.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="JuchuMulti.resx">
       <DependentUpon>JuchuMulti.cs</DependentUpon>
@@ -188,8 +197,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="siire.resx">
-      <DependentUpon>siire.cs</DependentUpon>
+    <EmbeddedResource Include="Shiire.resx">
+      <DependentUpon>Shiire.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Top.resx">
       <DependentUpon>Top.cs</DependentUpon>

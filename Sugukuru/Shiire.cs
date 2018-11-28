@@ -12,7 +12,7 @@ using MySql.Data.MySqlClient;
 
 namespace Sugukuru
 {
-    public partial class siire : Form
+    public partial class Shiire : Form
     {
         
         private string Constr;
@@ -24,13 +24,13 @@ namespace Sugukuru
         int num2;
 
 
-        public siire()
+        public Shiire()
         {
             InitializeComponent();
             this.Constr = ConfigurationManager.AppSettings["Ddconkey"];
         }
 
-        private void siire_Load(object sender, EventArgs e)
+        private void Shiire_Load(object sender, EventArgs e)
         {
             String sql = "SELECT `顧客名`,`受注日` FROM `受注` inner join `顧客情報` on `受注`.`顧客コード` = `顧客情報`.`顧客コード`;";
             DataSet dset = new DataSet("受注");
