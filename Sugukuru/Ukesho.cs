@@ -52,8 +52,8 @@ namespace Sugukuru
             //DB接続
             con.Open();
             //SQL作成
-            String sql = "SELECT k.顧客コード, k.顧客名, k.電話番号, k.入金方法, j.受注日, j.合計車輌代金, 合計登録手続代行費用, 合計車輌代金 + 合計登録手続代行費用 + 合計自動車税 AS 合計金額 FROM 請求明細 s, 受注 j, 顧客情報 k "
-                + "WHERE j.顧客コード = k.顧客コード"
+            String sql = "SELECT k.顧客コード, k.顧客名, k.電話番号, k.入金方法, j.受注日, j.合計車輌代金, 合計登録手続代行費用, 合計車輌代金 + 合計登録手続代行費用 + 合計自動車税 AS 合計金額 FROM 受注 j, 顧客情報 k "
+                + "WHERE j.顧客コード = k.顧客コード AND j.受注コード = " + this.juchuCode + ";"
                 ;
             //SQL文と接続情報を指定し、データアダプタ作成
             MySqlDataAdapter mAdp = new MySqlDataAdapter(sql, con);
@@ -67,10 +67,10 @@ namespace Sugukuru
             if (ResCnt != 0)
             {
                 lbClient.Text = data.Rows[0]["顧客名"].ToString() + "御中";
-                lbPrice.Text = String.Format("{0:#,0}", data.Rows[0]["合計金額"]) + "円";
-                lbPrice2.Text = lbPrice.Text;
-                lbCarPrice2.Text = String.Format("{0:#,0}", data.Rows[0]["合計車輌代金"]) + "円";
-                lbCharges.Text = String.Format("{0:#,0}", data.Rows[0]["合計登録手続代行費用"]) + "円";
+//                lbPrice.Text = String.Format("{0:#,0}", data.Rows[0]["合計金額"]) + "円";
+//                lbPrice2.Text = lbPrice.Text;
+                //                lbCarPrice2.Text = String.Format("{0:#,0}", data.Rows[0]["合計車輌代金"]) + "円";
+//                lbCharges.Text = String.Format("{0:#,0}", data.Rows[0]["合計登録手続代行費用"]) + "円";
                 lbWay.Text = data.Rows[0]["入金方法"].ToString();
                 lbDateOrder.Text = DateTime.Parse(data.Rows[0]["受注日"].ToString()).ToString("yyyy年MM月dd日");
 
@@ -78,27 +78,7 @@ namespace Sugukuru
 
 
 
-
-        //    lbLimit.Text = "2018年12月25日";
-            
-       //     lbPlace.Text = "株式会社HAL車庫";
-      //      lbCar.Text = "車名：" + "シルビア";
-     //       lbGrade.Text = "グレード：" + "G";
-       //     lbYear.Text = "年式："+"2002";
-     //       lbColor.Text = "カラー："+"ホワイト";
-      //      lbDistance.Text = "走行距離：" + "8万km";
-      //      lbSystem.Text = "変速システム："+"オートマ";
-
-     //       lbCarPrice.Text = "2,000,000円";
-     //       lbComission.Text = "200,000円";
-    //        lbTax.Text = "40,000円";
-
-            
-            
-         //   lbPrice2.Text = "2,240,000円";
-
             lbDateIssue.Text = DateTime.Today.ToString("yyyy年MM月dd日");
-
 
             lbStaff.Text = "担当:"+"竹久";
             lbMail.Text = "mail:sugukuru@hal.com";
@@ -129,18 +109,29 @@ namespace Sugukuru
             //抽出件数チェック
             DataTable data = dSet.Tables["data"];
             int ResCnt = data.Rows.Count;
-            for (int i = 0; i < ResCnt; i++)
-            //                if (ResCnt != 0)
-            {
+
+            int totalCarPrice = 0;
+            int totalCharge = 0;
+            int totalPrice = 0;
+
+            for (int i = 0; i < ResCnt; i++){
                 //                String[] sWidth = new String[] { "車名", "納品先", "車輌代金", "登録手続代行費用", "自動車税", "納期" };
                 String carName = data.Rows[i]["車名"].ToString();
                 String s2 = data.Rows[i]["納品先"].ToString();
                 String s3 = data.Rows[i]["車輌代金"].ToString();
+                totalCarPrice += int.Parse(data.Rows[i]["車輌代金"].ToString());
+                totalCharge += int.Parse(data.Rows[i]["登録手続代行費用"].ToString()) + int.Parse(data.Rows[i]["自動車税"].ToString());
                 String s4 = data.Rows[i]["登録手続代行費用"].ToString();
                 String s5 = data.Rows[i]["自動車税"].ToString();
                 String s6 = data.Rows[i]["納期"].ToString();
                 dataGridView1.Rows.Add(carName,s2,s3,s4,s5,s6);
             }
+            lbCarPrice2.Text = String.Format("{0:#,0}", totalCarPrice) + "円";
+            lbCharges.Text = String.Format("{0:#,0}", totalCharge) + "円";
+            lbPrice.Text = String.Format("{0:#,0}", totalCarPrice + totalCharge) + "円";
+            lbPrice2.Text = lbPrice.Text;
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)

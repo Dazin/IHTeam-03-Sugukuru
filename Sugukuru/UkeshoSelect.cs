@@ -92,7 +92,6 @@ namespace Sugukuru
                 form.ShowDialog();
                 form.Dispose();//閉じられたらリソース開放
                 this.Show();//自分自身を再表示する
-
             }
         }
 
