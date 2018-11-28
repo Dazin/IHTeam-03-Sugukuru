@@ -68,7 +68,7 @@ namespace Sugukuru
                     //消し込み処理。
                     MySqlConnection con = new MySqlConnection(this.conStr);
                     // コマンドを作成
-                    MySqlCommand cmd = new MySqlCommand("UPDATE 請求明細 s INNER JOIN 受注 j ON j.受注コード = s.受注コード SET 消込状態 = 1 WHERE j.顧客コード = " + kCode, con);
+                    MySqlCommand cmd = new MySqlCommand("UPDATE 請求明細 s INNER JOIN 顧客情報 k ON  s.顧客コード = k.顧客コード SET 消込状態 = 1 WHERE s.顧客コード = " + kCode, con);
                     // オープン
                     cmd.Connection.Open();
                     // 実行
@@ -98,8 +98,8 @@ namespace Sugukuru
             //DB接続
             con.Open();
             //SQL作成
-            String sql = "SELECT k.顧客コード, k.顧客名, k.電話番号, s.請求金額 FROM 請求明細 s, 受注 j, 顧客情報 k "
-                + "WHERE s.受注コード = j.受注コード AND j.顧客コード = k.顧客コード AND s.消込状態 = 0"
+            String sql = "SELECT k.顧客コード, k.顧客名, k.電話番号, s.請求金額 FROM 請求明細 s, 顧客情報 k "
+                + "WHERE s.顧客コード = k.顧客コード AND s.消込状態 =0"
                 ;
             //SQL文と接続情報を指定し、データアダプタ作成
             MySqlDataAdapter mAdp = new MySqlDataAdapter(sql, con);
@@ -273,9 +273,8 @@ namespace Sugukuru
             //DB接続
             con.Open();
             //SQL作成
-            String sql = "SELECT k.顧客コード, k.顧客名, k.電話番号, s.請求金額, z.金額, CONCAT('平成',SUBSTRING( z.起算日, 1, 2 ) , '年',SUBSTRING( z.起算日, 3, 2 ) , '月',SUBSTRING( z.起算日, 5, 2 ) , '日') AS 起算日  FROM 請求明細 s, 受注 j, 顧客情報 k, (SELECT TRIM('0' FROM 振込依頼人コード)  AS 顧客コード,SUM(金額) AS 金額,起算日 FROM 全銀 GROUP BY 振込依頼人コード) z WHERE s.受注コード = j.受注コード"
-+" AND j.顧客コード = k.顧客コード"
-+" AND z.顧客コード = k.顧客コード AND s.消込状態 = 0"
+            String sql = "SELECT k.顧客コード, k.顧客名, k.電話番号, s.請求金額, z.金額, CONCAT('平成',SUBSTRING( z.起算日, 1, 2 ) , '年',SUBSTRING( z.起算日, 3, 2 ) , '月',SUBSTRING( z.起算日, 5, 2 ) , '日') AS 起算日  FROM 請求明細 s, 顧客情報 k, (SELECT TRIM('0' FROM 振込依頼人コード)  AS 顧客コード,SUM(金額) AS 金額,起算日 FROM 全銀 GROUP BY 振込依頼人コード) z WHERE s.顧客コード = k.顧客コード"
+                        +" AND z.顧客コード = k.顧客コード AND s.消込状態 = 0"
                 ;
             //SQL文と接続情報を指定し、データアダプタ作成
             MySqlDataAdapter mAdp = new MySqlDataAdapter(sql, con);
@@ -327,8 +326,7 @@ namespace Sugukuru
             //DB接続
             con.Open();
             //SQL作成
-            String sql = "SELECT k.顧客コード, k.顧客名, k.電話番号, s.請求金額, z.金額, CONCAT('平成',SUBSTRING( z.起算日, 1, 2 ) , '年',SUBSTRING( z.起算日, 3, 2 ) , '月',SUBSTRING( z.起算日, 5, 2 ) , '日') AS 起算日  FROM 請求明細 s, 受注 j, 顧客情報 k, (SELECT TRIM('0' FROM 振込依頼人コード)  AS 顧客コード,SUM(金額) AS 金額,起算日 FROM 全銀 GROUP BY 振込依頼人コード) z WHERE s.受注コード = j.受注コード"
-+ " AND j.顧客コード = k.顧客コード"
+            String sql = "SELECT k.顧客コード, k.顧客名, k.電話番号, s.請求金額, z.金額, CONCAT('平成',SUBSTRING( z.起算日, 1, 2 ) , '年',SUBSTRING( z.起算日, 3, 2 ) , '月',SUBSTRING( z.起算日, 5, 2 ) , '日') AS 起算日  FROM 請求明細 s, 顧客情報 k, (SELECT TRIM('0' FROM 振込依頼人コード)  AS 顧客コード,SUM(金額) AS 金額,起算日 FROM 全銀 GROUP BY 振込依頼人コード) z WHERE s.顧客コード = k.顧客コード"
 + " AND z.顧客コード = k.顧客コード AND s.消込状態 = 0"
                 ;
             //SQL文と接続情報を指定し、データアダプタ作成
@@ -362,7 +360,7 @@ namespace Sugukuru
                         //テーブルの中身を空にする。
                         con = new MySqlConnection(this.conStr);
                         // コマンドを作成
-                        MySqlCommand cmd = new MySqlCommand("UPDATE 請求明細 s INNER JOIN 受注 j ON j.受注コード = s.受注コード SET 消込状態 = 1 WHERE j.顧客コード = " + kCode, con);
+                        MySqlCommand cmd = new MySqlCommand("UPDATE 請求明細 SET 消込状態 = 1 WHERE 請求コード = 1 AND 顧客コード = " + kCode, con);
                         // オープン
                         cmd.Connection.Open();
                         // 実行
