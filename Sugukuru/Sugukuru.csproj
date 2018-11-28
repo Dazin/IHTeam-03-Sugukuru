@@ -113,11 +113,11 @@
     <Compile Include="Seikyusho.Designer.cs">
       <DependentUpon>Seikyusho.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mitumori.cs">
+    <Compile Include="Mitsumori.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Mitumori.Designer.cs">
-      <DependentUpon>Mitumori.cs</DependentUpon>
+    <Compile Include="Mitsumori.Designer.cs">
+      <DependentUpon>Mitsumori.cs</DependentUpon>
     </Compile>
     <Compile Include="Kaishu.cs">
       <SubType>Form</SubType>
@@ -181,8 +181,8 @@
     <EmbeddedResource Include="Seikyusho.resx">
       <DependentUpon>Seikyusho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Mitumori.resx">
-      <DependentUpon>Mitumori.cs</DependentUpon>
+    <EmbeddedResource Include="Mitsumori.resx">
+      <DependentUpon>Mitsumori.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Kaishu.resx">
       <DependentUpon>Kaishu.cs</DependentUpon>
