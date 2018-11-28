@@ -36,8 +36,6 @@
             this.label48 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
-            this.kurumatb = new System.Windows.Forms.TextBox();
-            this.syohitb = new System.Windows.Forms.TextBox();
             this.label51 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
@@ -52,14 +50,12 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.zeitb = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.Gtable = new System.Windows.Forms.DataGridView();
-            this.goukeitb = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.noukitb = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Gtable)).BeginInit();
             this.SuspendLayout();
             // 
@@ -149,24 +145,6 @@
             this.label49.Size = new System.Drawing.Size(194, 26);
             this.label49.TabIndex = 67;
             this.label49.Text = "販売諸費用合計";
-            // 
-            // kurumatb
-            // 
-            this.kurumatb.Font = new System.Drawing.Font("MS UI Gothic", 13F);
-            this.kurumatb.Location = new System.Drawing.Point(305, 692);
-            this.kurumatb.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.kurumatb.Name = "kurumatb";
-            this.kurumatb.Size = new System.Drawing.Size(164, 33);
-            this.kurumatb.TabIndex = 68;
-            // 
-            // syohitb
-            // 
-            this.syohitb.Font = new System.Drawing.Font("MS UI Gothic", 13F);
-            this.syohitb.Location = new System.Drawing.Point(817, 692);
-            this.syohitb.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.syohitb.Name = "syohitb";
-            this.syohitb.Size = new System.Drawing.Size(164, 33);
-            this.syohitb.TabIndex = 70;
             // 
             // label51
             // 
@@ -276,9 +254,9 @@
             this.label12.Location = new System.Drawing.Point(15, 814);
             this.label12.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(220, 26);
+            this.label12.Size = new System.Drawing.Size(64, 26);
             this.label12.TabIndex = 83;
-            this.label12.Text = "納期18年12月07日";
+            this.label12.Text = "納期";
             // 
             // button2
             // 
@@ -309,24 +287,6 @@
             this.label9.Size = new System.Drawing.Size(0, 18);
             this.label9.TabIndex = 88;
             // 
-            // zeitb
-            // 
-            this.zeitb.Font = new System.Drawing.Font("MS UI Gothic", 13F);
-            this.zeitb.Location = new System.Drawing.Point(1375, 692);
-            this.zeitb.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.zeitb.Name = "zeitb";
-            this.zeitb.Size = new System.Drawing.Size(164, 33);
-            this.zeitb.TabIndex = 100;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Font = new System.Drawing.Font("MS UI Gothic", 13F);
-            this.textBox10.Location = new System.Drawing.Point(437, 154);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(164, 33);
-            this.textBox10.TabIndex = 101;
-            // 
             // label21
             // 
             this.label21.AutoSize = true;
@@ -347,15 +307,6 @@
             this.Gtable.RowTemplate.Height = 21;
             this.Gtable.Size = new System.Drawing.Size(1700, 387);
             this.Gtable.TabIndex = 103;
-            // 
-            // goukeitb
-            // 
-            this.goukeitb.Font = new System.Drawing.Font("MS UI Gothic", 13F);
-            this.goukeitb.Location = new System.Drawing.Point(1375, 756);
-            this.goukeitb.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.goukeitb.Name = "goukeitb";
-            this.goukeitb.Size = new System.Drawing.Size(164, 33);
-            this.goukeitb.TabIndex = 104;
             // 
             // label3
             // 
@@ -390,20 +341,25 @@
             this.label8.TabIndex = 107;
             this.label8.Text = "円";
             // 
+            // noukitb
+            // 
+            this.noukitb.Location = new System.Drawing.Point(87, 815);
+            this.noukitb.Name = "noukitb";
+            this.noukitb.Size = new System.Drawing.Size(150, 25);
+            this.noukitb.TabIndex = 108;
+            // 
             // mitumori
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1768, 811);
+            this.Controls.Add(this.noukitb);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.goukeitb);
             this.Controls.Add(this.Gtable);
             this.Controls.Add(this.label21);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.zeitb);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.button2);
@@ -418,8 +374,6 @@
             this.Controls.Add(this.label53);
             this.Controls.Add(this.label52);
             this.Controls.Add(this.label51);
-            this.Controls.Add(this.syohitb);
-            this.Controls.Add(this.kurumatb);
             this.Controls.Add(this.label49);
             this.Controls.Add(this.label47);
             this.Controls.Add(this.label48);
@@ -448,8 +402,6 @@
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.TextBox kurumatb;
-        private System.Windows.Forms.TextBox syohitb;
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.Label label53;
@@ -464,14 +416,12 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox zeitb;
-        private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.DataGridView Gtable;
-        private System.Windows.Forms.TextBox goukeitb;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox noukitb;
     }
 }
 

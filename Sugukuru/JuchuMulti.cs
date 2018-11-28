@@ -74,7 +74,7 @@ namespace Sugukuru
 
         private void button3_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("受注を完了してもよろしいですか？",
+            DialogResult result = MessageBox.Show("登録を完了してもよろしいですか？",
             "確認",
             MessageBoxButtons.OKCancel,
             MessageBoxIcon.Exclamation,

@@ -95,6 +95,20 @@ namespace Sugukuru
         private void button1_Click(object sender, EventArgs e)
         {
 
+            DialogResult result = MessageBox.Show("内容を登録し、完了してもよろしいですか？",
+            "確認",
+            MessageBoxButtons.OKCancel,
+            MessageBoxIcon.Exclamation,
+            MessageBoxDefaultButton.Button2);
+            if (result == DialogResult.OK)
+            {
+                this.Close();
+            }
+            else if (result == DialogResult.Cancel)
+            {
+
+            }
+
             if (textBox1.Text == "")
             {
                 Count = 0;

@@ -50,15 +50,24 @@ namespace Sugukuru
 
         private void button2_Click(object sender, EventArgs e)
         {
+            int n1 = 0;
+            int n2 = 0;
+            int n3 = 0;
+            for (int i = 0; i < cnt;i++ )
+            {
+                n1 += Convert.ToInt32(Gtable.Rows[i].Cells[2].Value);
+                n2 += Convert.ToInt32(Gtable.Rows[i].Cells[3].Value);
+                n3 += Convert.ToInt32(Gtable.Rows[i].Cells[4].Value);
+            }
             MySqlConnection con = new MySqlConnection(this.Constr);
             con.Open();
             for(int i=0;i<cnt;i++){
-                String sql = "UPDATE `受注情報` SET `車輌代金` = " + Gtable.Rows[i].Cells[2].Value.ToString() + ",`自動車税` = " + Gtable.Rows[i].Cells[3].Value.ToString() + ",`登録手続代行費用` = " + Gtable.Rows[i].Cells[4].Value.ToString() + " WHERE `受注コード` = " + this.num + ";";
+                String sql = "UPDATE `受注情報` SET `車輌代金` = " + Gtable.Rows[i].Cells[2].Value.ToString() + ",`自動車税` = " + Gtable.Rows[i].Cells[3].Value.ToString() + ",`登録手続代行費用` = " + Gtable.Rows[i].Cells[4].Value.ToString() + ",`納期` = '" + noukitb.Text.ToString() + "' WHERE `受注コード` = " + this.num + ";";
                 Console.WriteLine(sql);
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 cmd.ExecuteNonQuery();
             }
-            String sql2 = "UPDATE `受注` SET `合計車輌代金` = " + kurumatb.Text.ToString() + ",`合計自動車税` = " + zeitb.Text.ToString() + ",`合計登録手続代行費用` = " + syohitb.Text.ToString() + " WHERE `受注コード` = " + this.num + ";";
+            String sql2 = "UPDATE `受注` SET `合計車輌代金` = " + n1.ToString() + ",`合計自動車税` = " + n2.ToString() + ",`合計登録手続代行費用` = " + n3.ToString() + " WHERE `受注コード` = " + this.num + ";";
             Console.WriteLine(sql2);
             MySqlCommand cmd2 = new MySqlCommand(sql2, con);
             cmd2.ExecuteNonQuery();
